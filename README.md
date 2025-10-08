@@ -1,16 +1,54 @@
-# React + Vite
+# O'Fallon Dems Club Hub - v1.0
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a single-page application (SPA) built to serve as the central information hub for the O'Fallon, IL Democratic Club. It provides a clean, accessible, and responsive interface for members and the public to view upcoming events and organizational information.
 
-Currently, two official plugins are available:
+**Live Demo:** [https://otown-dems-hub.onrender.com](https://otown-dems-hub.onrender.com) 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Interactive Event Calendar:** Utilizes FullCalendar to display all upcoming club events fetched from a central API.
+* **Hoverable Tooltips:** Hovering over an event on the calendar reveals a tooltip with more details, such as time and description.
+* **Featured Event Banner:** A prominent banner at the top highlights the most urgent or important upcoming event.
+* **Responsive Layout:** A modern, multi-column layout built with CSS Grid that adapts to a single column on smaller screens.
+* **Light/Dark Mode:** A theme toggle allows users to switch between a light and dark color scheme for better accessibility and user preference.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+* **Frontend:** [React](https://reactjs.org/), [Vite](https://vitejs.dev/)
+* **Styling:** Custom CSS with CSS Variables for theming.
+* **Libraries:**
+    * [FullCalendar](https://fullcalendar.io/) for the calendar display.
+    * [Tippy.js](https://atomiks.github.io/tippyjs/) for tooltips.
+    * [Axios](https://axios-http.com/) for API requests.
+* **Deployment:** [Render](https://render.com/) (Static Site)
+
+---
+
+## 🚀 Setup and Installation
+
+To run this project locally, follow these steps:
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/your-username/otown-dems-hub.git](https://github.com/your-username/otown-dems-hub.git)
+    cd otown-dems-hub
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Run the Backend Server:**
+    This project is a frontend application that requires a separate backend server to provide the event data. Before starting this app, you must navigate to the `otown-dems-newsletter/backend` project and start its server (e.g., with `nodemon server.js` or `npm run dev`).
+
+4.  **Start the development server:**
+    ```bash
+    npm run dev
+    ```
+    The application will be available at `http://localhost:5173`.
+
