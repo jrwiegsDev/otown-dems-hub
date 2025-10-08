@@ -1,0 +1,102 @@
+/* src/App.css */
+
+.main-container {
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: var(--accent-gold);
+  text-align: center;
+}
+
+.theme-toggle-button {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  background-color: var(--surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- Banner & Link Styles --- */
+.protest-banner {
+  border: 2px solid var(--accent-gold);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  background-color: var(--surface);
+  text-align: center;
+}
+
+.protest-banner h2 {
+  color: var(--accent-blue);
+  margin-top: 0;
+}
+
+.protest-banner a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.protest-banner a:hover {
+  text-decoration: underline;
+}
+
+/* --- Main 3-Column Grid Layout --- */
+.main-layout {
+  display: grid;
+  /* Creates a 50% | 25% | 25% split */
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.layout-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  /* Vertical space between tiles in a column */
+}
+
+.content-tile {
+  background-color: var(--surface);
+  border: 1px solid var(--accent-gold);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+/* Specific tile for the banner to remove its outer border */
+.banner-tile {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* Specific tile for the calendar to give it room to grow */
+.calendar-tile {
+  flex-grow: 1;
+  /* Allows the calendar tile to fill available vertical space */
+  display: flex;
+}
+
+.calendar-tile>div {
+  width: 100%;
+  /* Ensures the FullCalendar component fills the tile */
+}
+
+/* --- Responsive styles for small screens --- */
+@media (max-width: 1024px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+    /* Switch to a single column */
+  }
+}

@@ -1,0 +1,79 @@
+/* src/components/FullCalendar.css */
+
+/* --- General & Toolbar --- */
+.fc-toolbar {
+    background-color: transparent !important;
+}
+
+.fc {
+    color: var(--text-primary);
+}
+
+.fc .fc-toolbar-title {
+    color: var(--accent-gold);
+}
+
+.fc .fc-button {
+    background-color: var(--surface);
+    color: var(--text-primary);
+    border: 1px solid var(--accent-blue);
+}
+
+.fc .fc-button:hover {
+    background-color: var(--border-color);
+}
+
+.fc .fc-button-primary:disabled {
+    background-color: var(--surface);
+    border-color: var(--border-color);
+}
+
+/* --- Calendar Grid --- */
+.fc .fc-daygrid-day {
+    border-color: var(--border-color);
+}
+
+/* Style the day-of-week header (Sun, Mon, etc.) */
+.fc .fc-col-header {
+    background-color: var(--surface);
+}
+
+.fc .fc-day-today {
+    background-color: var(--surface);
+}
+
+.fc .fc-col-header-cell-cushion {
+    color: var(--accent-gold);
+    text-decoration: none;
+}
+
+/* --- Event Styling & Text Wrap --- */
+.fc-event {
+    background-color: var(--accent-blue);
+    border: 1px solid var(--accent-blue);
+}
+
+.fc-event-title {
+    white-space: normal;
+    overflow-wrap: break-word;
+    padding: 2px;
+}
+
+/* --- Event Details "Tooltip" --- */
+.event-details {
+    background-color: #0d1117;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    border: 1px solid #30363d;
+}
+
+.event-details h4 {
+    margin-top: 0;
+    color: var(--accent-blue);
+}
+
+.event-details ul {
+    padding-left: 20px;
+    margin-bottom: 0.5rem;
+}
