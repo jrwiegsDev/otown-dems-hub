@@ -6,7 +6,7 @@ This project is a single-page application (SPA) built to serve as the central in
 
 ---
 
-## ✨ Features
+## Features
 
 * **Interactive Event Calendar:** Utilizes FullCalendar to display all upcoming club events fetched from a central API.
 * **Hoverable Tooltips:** Hovering over an event on the calendar reveals a tooltip with more details, such as time and description.
@@ -16,7 +16,7 @@ This project is a single-page application (SPA) built to serve as the central in
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * **Frontend:** [React](https://reactjs.org/), [Vite](https://vitejs.dev/)
 * **Styling:** Custom CSS with CSS Variables for theming.
@@ -28,7 +28,7 @@ This project is a single-page application (SPA) built to serve as the central in
 
 ---
 
-## 🚀 Setup and Installation
+## Setup and Installation
 
 To run this project locally, follow these steps:
 
