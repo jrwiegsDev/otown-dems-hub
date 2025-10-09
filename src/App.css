@@ -6,9 +6,20 @@
   box-sizing: border-box;
 }
 
-h1 {
+/* --- Main Heading & Logos --- */
+.main-heading {
   color: var(--accent-gold);
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 2rem;
+}
+
+.header-logo {
+  height: 60px;
+  width: auto;
 }
 
 .theme-toggle-button {
@@ -54,7 +65,6 @@ h1 {
 /* --- Main 3-Column Grid Layout --- */
 .main-layout {
   display: grid;
-  /* Creates a 50% | 25% | 25% split */
   grid-template-columns: 2fr 1fr 1fr;
   gap: 2rem;
   margin-top: 2rem;
@@ -64,7 +74,6 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  /* Vertical space between tiles in a column */
 }
 
 .content-tile {
@@ -84,19 +93,76 @@ h1 {
 /* Specific tile for the calendar to give it room to grow */
 .calendar-tile {
   flex-grow: 1;
-  /* Allows the calendar tile to fill available vertical space */
   display: flex;
 }
 
 .calendar-tile>div {
   width: 100%;
-  /* Ensures the FullCalendar component fills the tile */
+}
+
+/* --- Mailing List Form Styles --- */
+.mailing-list-form h3 {
+  margin-top: 0;
+  color: var(--accent-blue);
+}
+
+.mailing-list-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mailing-list-form label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.mailing-list-form input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.mailing-list-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--accent-blue);
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.mailing-list-form button:hover {
+  opacity: 0.9;
+}
+
+.mailing-list-form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.status-message {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.status-message.error {
+  color: #ff8080;
+}
+
+.status-message.success {
+  color: #80ff80;
 }
 
 /* --- Responsive styles for small screens --- */
 @media (max-width: 1024px) {
   .main-layout {
     grid-template-columns: 1fr;
-    /* Switch to a single column */
   }
 }
