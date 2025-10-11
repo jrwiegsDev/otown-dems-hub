@@ -7,7 +7,7 @@
   --text-primary: #1c1e21;
   --text-secondary: #65676b;
   --border-color: #ced0d4;
-  --accent-gold: #D4AF37;
+  --accent-gold: #003366; /* CHANGED: A dark navy blue for better contrast */
   --accent-blue: #1877f2;
 }
 
@@ -18,7 +18,7 @@ body[data-theme='dark'] {
   --text-primary: #c9d1d9;
   --text-secondary: #8b949e;
   --border-color: #30363d;
-  --accent-gold: #E3B341;
+  --accent-gold: var(--text-primary); /* CHANGED: Make it the same as the primary text (white) */
   --accent-blue: #58a6ff;
 }
 

@@ -5,16 +5,16 @@ import Events from './components/Events'
 import Banner from './components/Banner'
 import MissionStatement from './components/MissionStatement'
 import ThemeToggle from './components/ThemeToggle'
-import MailingListSignup from './components/MailingListSignup' // <-- 1. Import it
+import MailingListSignup from './components/MailingListSignup'
 
 function App() {
   return (
     <div className="main-container">
       <ThemeToggle />
-      <h1 className="main-heading"> {/* Added a class for styling */}
-        <img src="/OADC_logo.jpg" alt="OADC Logo" className="header-logo left" />
+      <h1 className="main-heading">
+        <img src="/OTown-Dems_logo.png" alt="O'Fallon Area Dems Logo" className="header-logo left" />
         O'Fallon Area Democratic Club
-        <img src="/OADC_logo.jpg" alt="OADC Logo" className="header-logo right" />
+        <img src="/OTown-Dems_logo.png" alt="O'Fallon Area Dems Logo" className="header-logo right" />
       </h1>
       
       <div className="main-layout">
@@ -34,20 +34,22 @@ function App() {
           <div className="content-tile">
             <MissionStatement />
           </div>
+          {/* --- UPDATED: Donations Placeholder --- */}
           <div className="content-tile placeholder">
-            <h3>Placeholder</h3>
-            <p>Space for future content.</p>
+            <h3>Support Our Cause</h3>
+            <p>Donations section coming soon. We'll link to our official ActBlue page here.</p>
           </div>
         </div>
 
         {/* --- Column 3 (25% width) --- */}
         <div className="layout-column">
-           <div className="content-tile"> {/* <-- 2. Replace the placeholder */}
+           <div className="content-tile">
             <MailingListSignup />
           </div>
+           {/* --- UPDATED: Socials Placeholder --- */}
            <div className="content-tile placeholder">
-            <h3>Placeholder</h3>
-            <p>Space for future content.</p>
+            <h3>Follow Us</h3>
+            <p>Links to our social media pages (Facebook, X, Instagram, Tik Tok, etc.) will be here.</p>
           </div>
         </div>
 
