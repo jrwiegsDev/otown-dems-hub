@@ -76,7 +76,7 @@ const Events = () => {
         }}
         // --- NEW: Use our custom render function ---
         eventContent={renderEventContent}
-        height="auto"
+        height="100%"
       />
     </div>
   );

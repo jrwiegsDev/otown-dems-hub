@@ -6,7 +6,6 @@ const MissionStatement = () => {
   return (
     <div>
       <h2>Our Mission</h2>
-      <p>The object and purposes of this organization are:</p>
       <ul>
         <li>To promote education in the history of, and the government of, our great nation;</li>
         <li>To assist in the promotion and advancement of sound Democratic principles;</li>

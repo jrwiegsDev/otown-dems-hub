@@ -39,46 +39,19 @@
   justify-content: center;
 }
 
-/* --- Banner & Link Styles --- */
-.protest-banner {
-  border: 2px solid var(--accent-gold);
-  border-radius: 8px;
-  padding: 1rem 1.5rem;
-  background-color: var(--surface);
-  text-align: center;
-}
-
-.protest-banner h2 {
-  color: var(--accent-blue);
-  margin-top: 0;
-}
-
-.protest-banner a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.protest-banner a:hover {
-  text-decoration: underline;
-}
-
-/* NEW: Styles for the protest map image */
-.protest-map-image {
-  max-width: 100%; /* Ensures image doesn't overflow its container */
-  height: auto;    /* Maintains aspect ratio */
-  border-radius: 4px; /* Slightly rounded corners for aesthetics */
-  margin-top: 1rem; /* Space above the image */
-  display: block; /* Ensures it takes up full width and centers easily */
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* --- Main 3-Column Grid Layout --- */
-.main-layout {
+/* --- Main Layout Sections --- */
+.top-section, .bottom-section {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
   gap: 2rem;
   margin-top: 2rem;
+}
+
+.top-section {
+  grid-template-columns: 1fr 1fr;
+}
+
+.bottom-section {
+  grid-template-columns: 1fr 1fr;
 }
 
 .layout-column {
@@ -101,17 +74,48 @@
   padding: 0;
 }
 
-/* Specific tile for the calendar to give it room to grow */
+/* Specific tile for the calendar to ensure it fills its space */
 .calendar-tile {
-  flex-grow: 1;
   display: flex;
 }
 
-.calendar-tile>div {
+.calendar-tile > div {
   width: 100%;
 }
 
-/* --- Mailing List Form Styles --- */
+/* --- Component-Specific Styles --- */
+.protest-banner {
+  border: 2px solid var(--accent-gold);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  background-color: var(--surface);
+  text-align: center;
+}
+
+.protest-banner h2 {
+  color: var(--accent-blue);
+  margin-top: 0;
+}
+
+.protest-banner a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.protest-banner a:hover {
+  text-decoration: underline;
+}
+
+.protest-map-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-top: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .mailing-list-form h3 {
   margin-top: 0;
   color: var(--accent-blue);
@@ -171,7 +175,6 @@
   color: #80ff80;
 }
 
-/* --- Socials Component Styles --- */
 .socials-component h3 {
   margin-top: 0;
   color: var(--accent-blue);
@@ -181,24 +184,55 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem; /* Space between icons */
+  gap: 2rem;
   margin-top: 1.5rem;
 }
 
 .socials-icon-container a {
   color: var(--text-primary);
-  font-size: 2.5rem; /* Icon size */
+  font-size: 2.5rem;
   transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .socials-icon-container a:hover {
   color: var(--accent-blue);
-  transform: scale(1.1); /* Slight zoom on hover */
+  transform: scale(1.1);
 }
 
-/* --- Responsive styles for small screens --- */
+/* --- Footer, Policy Page & Responsive Styles --- */
+.site-footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.site-footer a {
+  color: var(--accent-blue);
+}
+
+.policy-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--surface);
+  border-radius: 8px;
+}
+
+.policy-container h1 {
+  margin-top: 0;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
 @media (max-width: 1024px) {
-  .main-layout {
+  .top-section, .bottom-section {
     grid-template-columns: 1fr;
   }
 }
