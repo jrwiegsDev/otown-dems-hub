@@ -236,9 +236,4 @@
   .top-section, .bottom-section {
     grid-template-columns: 1fr;
   }
-
-  /* This more specific selector will override the inline style */
-  .calendar-tile .fc {
-    height: auto !important;
-  }
 }

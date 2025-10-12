@@ -5,16 +5,19 @@ import axios from 'axios';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import './FullCalendar.css';
-
-// --- NEW: Tippy.js imports for tooltips ---
 import Tippy from '@tippyjs/react';
-import 'tippy.js/dist/tippy.css'; // Optional for default styling
+import 'tippy.js/dist/tippy.css';
+import { useMediaQuery } from '../hooks/useMediaQuery'; // <-- 1. Import the hook
 
 const Events = () => {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // 2. Use the hook to check for mobile screen size
+  const isMobile = useMediaQuery('(max-width: 1024px)');
+
+  // ... (useEffect, formattedEvents, renderEventContent remain the same) ...
   useEffect(() => {
     const fetchEvents = async () => {
       try {
@@ -39,7 +42,6 @@ const Events = () => {
     }
   }));
 
-  // --- NEW: Custom function to render event content with a tooltip ---
   const renderEventContent = (eventInfo) => {
     const { description, time } = eventInfo.event.extendedProps;
     const tooltipContent = `
@@ -63,6 +65,7 @@ const Events = () => {
   if (loading) return <p>Loading events...</p>;
   if (error) return <p style={{ color: 'red' }}>{error}</p>;
 
+
   return (
     <div>
       <FullCalendar
@@ -74,9 +77,9 @@ const Events = () => {
           center: 'title',
           right: 'dayGridMonth,dayGridWeek'
         }}
-        // --- NEW: Use our custom render function ---
         eventContent={renderEventContent}
-        height="100%"
+        // 3. Conditionally set the height prop
+        height={isMobile ? 'auto' : '100%'}
       />
     </div>
   );
