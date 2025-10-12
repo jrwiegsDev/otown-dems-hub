@@ -62,6 +62,17 @@
   text-decoration: underline;
 }
 
+/* NEW: Styles for the protest map image */
+.protest-map-image {
+  max-width: 100%; /* Ensures image doesn't overflow its container */
+  height: auto;    /* Maintains aspect ratio */
+  border-radius: 4px; /* Slightly rounded corners for aesthetics */
+  margin-top: 1rem; /* Space above the image */
+  display: block; /* Ensures it takes up full width and centers easily */
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* --- Main 3-Column Grid Layout --- */
 .main-layout {
   display: grid;
@@ -158,6 +169,31 @@
 
 .status-message.success {
   color: #80ff80;
+}
+
+/* --- Socials Component Styles --- */
+.socials-component h3 {
+  margin-top: 0;
+  color: var(--accent-blue);
+}
+
+.socials-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem; /* Space between icons */
+  margin-top: 1.5rem;
+}
+
+.socials-icon-container a {
+  color: var(--text-primary);
+  font-size: 2.5rem; /* Icon size */
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.socials-icon-container a:hover {
+  color: var(--accent-blue);
+  transform: scale(1.1); /* Slight zoom on hover */
 }
 
 /* --- Responsive styles for small screens --- */
