@@ -4,25 +4,15 @@ import React from 'react';
 
 const Banner = () => {
   return (
-    <div className="protest-banner">
-      <h2>
-        Join Us for the <a href="https://www.mobilize.us/mobilize/event/840695/" target="_blank" rel="noopener noreferrer">
-          No Kings 2 Protest!!!
-        </a>
-      </h2>
+    <div className="protest-banner"> {/* Keep the class name for styling */}
+      <h2>Join Us for Our Monthly Meeting!</h2>
       <p>
-        <strong>Date:</strong> Saturday, October 18, 2025
-        <br />
-        <strong>Time:</strong> 9:00 AM - 10:30 AM
-        <br />
-        <strong>Location:</strong> O'Fallon City Hall
+        <strong>Date:</strong> Wednesday, October 22, 2025<br />
+        <strong>Time:</strong> 6:30 PM<br />
+        <strong>Location:</strong> O'Fallon KC Hall
       </p>
-      {/* NEW: Image added here */}
-      <img 
-        src="/No-Kings-2.png" 
-        alt="Map of No Kings 2 Protests" 
-        className="protest-map-image" 
-      />
+      <p>Thank you to everyone who showed up and made their voices heard at No Kings 2.0! Crowd estimates are between 695 - 750 downtown!!!</p>
+      <p>Please come out this coming Wednesday night for our monthly meeting!</p>
     </div>
   );
 };

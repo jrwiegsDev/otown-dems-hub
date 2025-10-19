@@ -1,12 +1,17 @@
 /* src/App.css */
 
+/* ==========================================================================
+   General Page Styles
+   ========================================================================== */
 .main-container {
   min-height: 100vh;
   padding: 2rem;
   box-sizing: border-box;
 }
 
-/* --- Main Heading & Logos --- */
+/* ==========================================================================
+   Header & Theme Toggle
+   ========================================================================== */
 .main-heading {
   color: var(--accent-gold);
   text-align: center;
@@ -37,27 +42,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 10;
 }
 
-/* --- Main Layout Sections --- */
-.top-section, .bottom-section {
+/* ==========================================================================
+   Main Grid Layout
+   ========================================================================== */
+.main-content-grid {
   display: grid;
-  gap: 2rem;
-  margin-top: 2rem;
+  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  gap: 2rem; /* Space between the two columns */
+  align-items: start; /* THIS IS THE KEY: Prevents columns from stretching to equal height, fixing the whitespace issue. */
 }
 
-.top-section {
-  grid-template-columns: 1fr 1fr;
-}
-
-.bottom-section {
-  grid-template-columns: 1fr 1fr;
-}
-
-.layout-column {
+.grid-column {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2rem; /* Vertical space between tiles in a column */
 }
 
 .content-tile {
@@ -67,23 +68,29 @@
   padding: 1.5rem;
 }
 
-/* Specific tile for the banner to remove its outer border */
+/* ==========================================================================
+   Specific Tile Styles
+   ========================================================================== */
 .banner-tile {
   background-color: transparent;
   border: none;
   padding: 0;
 }
 
-/* Specific tile for the calendar to ensure it fills its space */
 .calendar-tile {
   display: flex;
+  min-height: 450px; /* Set a minimum height for the calendar on desktop */
 }
 
-.calendar-tile > div {
+.calendar-tile > div { /* Target the direct child (FullCalendar container) */
   width: 100%;
 }
 
-/* --- Component-Specific Styles --- */
+/* ==========================================================================
+   Component Styles
+   ========================================================================== */
+
+/* --- Banner --- */
 .protest-banner {
   border: 2px solid var(--accent-gold);
   border-radius: 8px;
@@ -97,25 +104,7 @@
   margin-top: 0;
 }
 
-.protest-banner a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.protest-banner a:hover {
-  text-decoration: underline;
-}
-
-.protest-map-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
-  margin-top: 1rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
+/* --- Mailing List Form --- */
 .mailing-list-form h3 {
   margin-top: 0;
   color: var(--accent-blue);
@@ -125,11 +114,6 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-}
-
-.mailing-list-form label {
-  font-size: 0.9rem;
-  font-weight: 600;
 }
 
 .mailing-list-form input {
@@ -153,28 +137,7 @@
   margin-top: 0.5rem;
 }
 
-.mailing-list-form button:hover {
-  opacity: 0.9;
-}
-
-.mailing-list-form button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.status-message {
-  margin-top: 1rem;
-  font-weight: bold;
-}
-
-.status-message.error {
-  color: #ff8080;
-}
-
-.status-message.success {
-  color: #80ff80;
-}
-
+/* --- Socials Component --- */
 .socials-component h3 {
   margin-top: 0;
   color: var(--accent-blue);
@@ -199,7 +162,32 @@
   transform: scale(1.1);
 }
 
-/* --- Footer, Policy Page & Responsive Styles --- */
+/* --- Donation Tile --- */
+.donation-tile {
+  text-align: center;
+}
+
+.donation-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 12px 24px;
+  background-color: var(--accent-blue);
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.donation-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05);
+}
+
+/* ==========================================================================
+   Footer & Policy Page
+   ========================================================================== */
 .site-footer {
   text-align: center;
   margin-top: 3rem;
@@ -212,28 +200,17 @@
   color: var(--accent-blue);
 }
 
-.policy-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
-  background-color: var(--surface);
-  border-radius: 8px;
-}
-
-.policy-container h1 {
-  margin-top: 0;
-}
-
-.back-link {
-  display: inline-block;
-  margin-bottom: 2rem;
-  color: var(--accent-blue);
-  text-decoration: none;
-}
-
-/* --- Responsive styles for small screens --- */
+/* ==========================================================================
+   Responsive Styles
+   ========================================================================== */
 @media (max-width: 1024px) {
-  .top-section, .bottom-section {
+  /* Switch grid to a single column on smaller screens */
+  .main-content-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Reset calendar min-height on mobile to avoid excessive space */
+  .calendar-tile {
+    min-height: auto;
   }
 }

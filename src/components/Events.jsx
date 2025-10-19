@@ -78,8 +78,8 @@ const Events = () => {
           right: 'dayGridMonth,dayGridWeek'
         }}
         eventContent={renderEventContent}
-        // 3. Conditionally set the height prop
         height={isMobile ? 'auto' : '100%'}
+        aspectRatio={1.8} /* <-- ADD THIS PROP */
       />
     </div>
   );

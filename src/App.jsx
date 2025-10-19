@@ -9,6 +9,7 @@ import Banner from './components/Banner';
 import MissionStatement from './components/MissionStatement';
 import ThemeToggle from './components/ThemeToggle';
 import MailingListSignup from './components/MailingListSignup';
+import Donation from './components/Donation';
 import Socials from './components/Socials';
 import Footer from './components/Footer';
 import PolicyPage from './pages/PolicyPage';
@@ -22,33 +23,35 @@ const MainPage = () => (
       <img src="/OTown-Dems_logo.png" alt="O'Fallon Area Dems Logo" className="header-logo right" />
     </h1>
     
-    {/* --- Section 1: Top Row --- */}
-    <div className="top-section">
-      <div className="content-tile banner-tile">
-        <Banner />
-      </div>
-      <div className="content-tile calendar-tile">
-        <Events />
-      </div>
-    </div>
-
-    {/* --- Bottom Sections (2 & 3) --- */}
-    <div className="bottom-section">
-      {/* Section 2: Lower Left Column */}
-      <div className="layout-column">
-        {/* Mailing list is now the only tile here */}
+    {/* --- NEW UNIFIED GRID LAYOUT --- */}
+    <div className="main-content-grid">
+      
+      {/* --- LEFT COLUMN (Q1 & Q3) --- */}
+      <div className="grid-column">
+        {/* Q1: Banner */}
+        <div className="content-tile banner-tile">
+          <Banner />
+        </div>
+        
+        {/* Q3: Mailing List & Donations */}
         <div className="content-tile">
           <MailingListSignup />
         </div>
+        
+        {/* THIS IS THE UPDATED PART */}
+        <div className="content-tile donation-tile">
+          <Donation />
+        </div>
       </div>
       
-      {/* Section 3: Lower Right Column */}
-      <div className="layout-column">
-        <div className="content-tile placeholder">
-          <h3>Support Our Cause</h3>
-          <p>Donations section coming soon. We'll link to our official ActBlue page here.</p>
+      {/* --- RIGHT COLUMN (Q2 & Q4) --- */}
+      <div className="grid-column">
+        {/* Q2: Calendar */}
+        <div className="content-tile calendar-tile">
+          <Events />
         </div>
-        {/* Mission statement moves here */}
+
+        {/* Q4: Mission & Socials */}
         <div className="content-tile">
           <MissionStatement />
         </div>
@@ -56,6 +59,7 @@ const MainPage = () => (
           <Socials />
         </div>
       </div>
+      
     </div>
   </>
 );
