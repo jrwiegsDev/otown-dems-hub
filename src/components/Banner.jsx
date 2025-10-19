@@ -11,7 +11,7 @@ const Banner = () => {
         <strong>Time:</strong> 6:30 PM<br />
         <strong>Location:</strong> O'Fallon KC Hall
       </p>
-      <p>Thank you to everyone who showed up and made their voices heard at No Kings 2.0! Crowd estimates are between 695 - 750 downtown!!!</p>
+      <p>Thank you to everyone who showed up and made their voices heard at No Kings 2.0! Crowd estimates are between 695 - 750 people downtown!!!</p>
       <p>Please come out this coming Wednesday night for our monthly meeting!</p>
     </div>
   );

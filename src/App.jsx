@@ -38,7 +38,6 @@ const MainPage = () => (
           <MailingListSignup />
         </div>
         
-        {/* THIS IS THE UPDATED PART */}
         <div className="content-tile donation-tile">
           <Donation />
         </div>

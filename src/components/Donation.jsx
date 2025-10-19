@@ -6,7 +6,7 @@ const Donation = () => {
   return (
     // A React Fragment (<>) is used here because the parent div in App.jsx provides the tile styling.
     <>
-      <h3>Support Our Cause</h3>
+      <h3>Donate to the O'Fallon Democrats Club</h3>
       <p>Your contribution fuels our local efforts to promote progressive values and support Democratic candidates.</p>
       <a 
         href="https://secure.actblue.com/donate/o-fallon-democrats-club-1" 

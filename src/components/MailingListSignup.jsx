@@ -39,7 +39,7 @@ const MailingListSignup = () => {
   return (
     <div className="mailing-list-form">
       <h3>Join Our Mailing List</h3>
-      <p>Stay up to date with our events and news.</p>
+      <p>Stay up to date with our events and news!</p>
       <form onSubmit={handleSubmit}>
         <label htmlFor="firstName">First Name*</label>
         <input
