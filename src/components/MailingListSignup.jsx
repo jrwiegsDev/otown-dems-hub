@@ -40,6 +40,7 @@ const MailingListSignup = () => {
     <div className="mailing-list-form">
       <h3>Join Our Mailing List</h3>
       <p>Stay up to date with our events and news!</p>
+      <p>Please Note: If you are a current subscriber, an error will occur if you try to sign up again with the same email address.</p>
       <form onSubmit={handleSubmit}>
         <label htmlFor="firstName">First Name*</label>
         <input
