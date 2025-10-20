@@ -45,6 +45,41 @@
   z-index: 10;
 }
 
+/* --- Live User Count Styles --- */
+.live-user-count {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  background-color: var(--surface);
+  color: var(--text-secondary); 
+  padding: 8px 15px; /* Increased padding */
+  border-radius: 8px; /* Slightly larger radius */
+  font-size: 1rem; /* Increased font size */
+  font-weight: 600; /* Slightly bolder */
+  border: 1px solid var(--border-color);
+  z-index: 10;
+  display: flex; /* Use flexbox for alignment */
+  align-items: center;
+  gap: 8px; /* Space between icon and text */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.user-count-icon {
+  color: var(--accent-blue); /* Make the icon blue */
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.user-count-text {
+  /* No specific styles needed for the text span itself */
+}
+
+/* Optional pulse animation */
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+
 /* ==========================================================================
    Main Grid Layout
    ========================================================================== */

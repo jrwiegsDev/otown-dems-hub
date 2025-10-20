@@ -8,6 +8,7 @@ import Events from './components/Events';
 import Banner from './components/Banner';
 import MissionStatement from './components/MissionStatement';
 import ThemeToggle from './components/ThemeToggle';
+import LiveUserCount from './components/LiveUserCount';
 import MailingListSignup from './components/MailingListSignup';
 import Donation from './components/Donation';
 import Socials from './components/Socials';
@@ -67,6 +68,7 @@ function App() {
   return (
     <div className="main-container">
       <ThemeToggle />
+      <LiveUserCount />
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/privacy-policy" element={<PolicyPage />} />
