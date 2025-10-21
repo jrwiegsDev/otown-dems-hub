@@ -264,7 +264,7 @@
   border: 1px solid var(--border-color);
   border-radius: 8px;
   background-color: var(--background);
-  align-items: center;
+  align-items: flex-start;
 }
 
 .rep-photo {
@@ -273,10 +273,52 @@
   border-radius: 8px;
   object-fit: cover;
   border: 2px solid var(--border-color);
+  flex-shrink: 0;
 }
 
 .rep-info {
   flex: 1;
+  min-width: 0;
+}
+
+.rep-contact {
+  flex-shrink: 0;
+  text-align: right;
+  border-left: 1px solid var(--border-color);
+  padding-left: 1rem;
+  min-width: 200px;
+}
+
+.rep-contact-label {
+  font-weight: bold;
+  color: var(--accent-blue);
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.rep-contact-info {
+  margin: 0.25rem 0;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.rep-contact-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 6px 12px;
+  background-color: var(--accent-blue);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+.rep-contact-link:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
 }
 
 .rep-name {
