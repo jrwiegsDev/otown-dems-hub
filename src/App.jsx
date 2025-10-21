@@ -29,20 +29,25 @@ const MainPage = () => (
     {/* --- NEW UNIFIED GRID LAYOUT --- */}
     <div className="main-content-grid">
       
-      {/* --- COLUMN 1 --- */}
+      {/* --- COLUMN 1: INFORMATIONAL --- */}
       <div className="grid-column">
         {/* Banner */}
         <div className="content-tile banner-tile">
           <Banner />
         </div>
         
-        {/* Mailing List */}
+        {/* No Kings */}
         <div className="content-tile">
-          <MailingListSignup />
+          <NoKings />
+        </div>
+
+        {/* Mission Statement */}
+        <div className="content-tile">
+          <MissionStatement />
         </div>
       </div>
       
-      {/* --- COLUMN 2 (MIDDLE - WIDER) --- */}
+      {/* --- COLUMN 2: CALENDAR (MIDDLE - WIDER) --- */}
       <div className="grid-column">
         {/* Calendar */}
         <div className="content-tile calendar-tile">
@@ -55,16 +60,11 @@ const MainPage = () => (
         </div>
       </div>
       
-      {/* --- COLUMN 3 --- */}
+      {/* --- COLUMN 3: ACTION --- */}
       <div className="grid-column">
-        {/* No Kings */}
+        {/* Mailing List */}
         <div className="content-tile">
-          <NoKings />
-        </div>
-
-        {/* Mission Statement */}
-        <div className="content-tile">
-          <MissionStatement />
+          <MailingListSignup />
         </div>
 
         {/* Donation */}
