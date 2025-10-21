@@ -81,8 +81,8 @@
    ========================================================================== */
 .main-content-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
-  gap: 2rem; /* Space between the two columns */
+  grid-template-columns: 0.85fr 1.3fr 0.85fr; /* Middle column even wider for calendar breathing room */
+  gap: 2rem; /* Space between the three columns */
   align-items: start; /* THIS IS THE KEY: Prevents columns from stretching to equal height, fixing the whitespace issue. */
 }
 
@@ -110,7 +110,7 @@
 
 .calendar-tile {
   display: flex;
-  min-height: 450px; /* Set a minimum height for the calendar on desktop */
+  min-height: 500px; /* Add back min-height for calendar to render properly */
 }
 
 .calendar-tile > div { /* Target the direct child (FullCalendar container) */
@@ -213,6 +213,163 @@
 
 .donation-button:hover {
   background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.05);
+}
+
+/* --- Representatives Component --- */
+.representatives-component h3 {
+  margin-top: 0;
+  color: var(--accent-blue);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.rep-filter-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.rep-filter-btn {
+  padding: 8px 24px;
+  border: 2px solid var(--accent-blue);
+  background-color: var(--background);
+  color: var(--text-primary);
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.rep-filter-btn:hover {
+  background-color: var(--surface);
+}
+
+.rep-filter-btn.active {
+  background-color: var(--accent-blue);
+  color: white;
+}
+
+.representatives-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.rep-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--background);
+  align-items: center;
+}
+
+.rep-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 2px solid var(--border-color);
+}
+
+.rep-info {
+  flex: 1;
+}
+
+.rep-name {
+  margin: 0 0 0.25rem 0;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+
+.rep-district {
+  margin: 0.25rem 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.rep-party {
+  margin: 0.25rem 0;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.rep-party.democratic {
+  color: #4a90e2; /* Blue for Democrats */
+}
+
+.rep-party.republican {
+  color: #e24a4a; /* Red for Republicans */
+}
+
+.rep-election {
+  margin: 0.25rem 0;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.julie-callout {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: var(--accent-blue);
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.julie-callout p {
+  margin: 0;
+}
+
+/* --- No Kings Tile --- */
+.no-kings-tile {
+  text-align: center;
+}
+
+.no-kings-tile h3 {
+  margin-top: 0;
+  color: var(--accent-blue);
+  margin-bottom: 0.5rem; /* Reduced from 1rem */
+}
+
+.no-kings-logo {
+  width: 100%;
+  max-width: 150px; /* Further reduced for more compact look */
+  height: auto;
+  margin: 0.5rem 0; /* Reduced from 1rem */
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.no-kings-logo:hover {
+  transform: scale(1.05);
+}
+
+.no-kings-tile p {
+  color: var(--text-secondary);
+  margin: 0.5rem 0; /* Reduced from 1rem */
+  line-height: 1.5; /* Slightly tighter line height */
+  font-size: 0.95rem; /* Slightly smaller text */
+}
+
+.no-kings-link {
+  display: inline-block;
+  margin-top: 0.75rem; /* Reduced from 1rem */
+  padding: 8px 16px; /* Slightly smaller padding */
+  background-color: var(--accent-gold);
+  color: var(--background);
+  font-weight: bold;
+  font-size: 0.95rem; /* Slightly smaller */
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.no-kings-link:hover {
+  background-color: #d4af37; /* Slightly darker gold on hover */
   transform: scale(1.05);
 }
 

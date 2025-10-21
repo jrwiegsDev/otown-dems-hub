@@ -12,6 +12,8 @@ import LiveUserCount from './components/LiveUserCount';
 import MailingListSignup from './components/MailingListSignup';
 import Donation from './components/Donation';
 import Socials from './components/Socials';
+import NoKings from './components/NoKings';
+import Representatives from './components/Representatives';
 import Footer from './components/Footer';
 import PolicyPage from './pages/PolicyPage';
 
@@ -27,34 +29,50 @@ const MainPage = () => (
     {/* --- NEW UNIFIED GRID LAYOUT --- */}
     <div className="main-content-grid">
       
-      {/* --- LEFT COLUMN (Q1 & Q3) --- */}
+      {/* --- COLUMN 1 --- */}
       <div className="grid-column">
-        {/* Q1: Banner */}
+        {/* Banner */}
         <div className="content-tile banner-tile">
           <Banner />
         </div>
         
-        {/* Q3: Mailing List & Donations */}
+        {/* Mailing List */}
         <div className="content-tile">
           <MailingListSignup />
         </div>
-        
-        <div className="content-tile donation-tile">
-          <Donation />
-        </div>
       </div>
       
-      {/* --- RIGHT COLUMN (Q2 & Q4) --- */}
+      {/* --- COLUMN 2 (MIDDLE - WIDER) --- */}
       <div className="grid-column">
-        {/* Q2: Calendar */}
+        {/* Calendar */}
         <div className="content-tile calendar-tile">
           <Events />
         </div>
 
-        {/* Q4: Mission & Socials */}
+        {/* Representatives */}
+        <div className="content-tile">
+          <Representatives />
+        </div>
+      </div>
+      
+      {/* --- COLUMN 3 --- */}
+      <div className="grid-column">
+        {/* No Kings */}
+        <div className="content-tile">
+          <NoKings />
+        </div>
+
+        {/* Mission Statement */}
         <div className="content-tile">
           <MissionStatement />
         </div>
+
+        {/* Donation */}
+        <div className="content-tile donation-tile">
+          <Donation />
+        </div>
+
+        {/* Socials */}
         <div className="content-tile">
           <Socials />
         </div>
