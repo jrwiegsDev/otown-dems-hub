@@ -17,8 +17,8 @@ const MailingListSignup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.firstName || !formData.email) {
-      setStatus({ ...status, error: 'First name and email are required.' });
+    if (!formData.email) {
+      setStatus({ ...status, error: 'Email address is required.' });
       return;
     }
     
@@ -26,9 +26,11 @@ const MailingListSignup = () => {
 
     try {
       const endpoint = `${import.meta.env.VITE_API_URL}/api/subscribers`;
-      await axios.post(endpoint, formData);
+      const response = await axios.post(endpoint, formData);
       
-      setStatus({ loading: false, error: null, success: 'Success! Thanks for signing up.' });
+      // Use the message from the backend response
+      const successMessage = response.data.message || 'Success! Thanks for signing up.';
+      setStatus({ loading: false, error: null, success: successMessage });
       setFormData({ firstName: '', lastName: '', email: '' }); // Clear form
     } catch (err) {
       setStatus({ loading: false, error: 'An error occurred. Please try again.', success: null });
@@ -40,16 +42,15 @@ const MailingListSignup = () => {
     <div className="mailing-list-form">
       <h3>Join Our Mailing List</h3>
       <p>Stay up to date with our events and news!</p>
-      <p>Please Note: If you are a current subscriber, an error will occur if you try to sign up again with the same email address.</p>
+      <p>Already subscribed? No worries! Submitting this form will update your information with any new details you provide.</p>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="firstName">First Name*</label>
+        <label htmlFor="firstName">First Name</label>
         <input
           type="text"
           id="firstName"
           name="firstName"
           value={formData.firstName}
           onChange={handleChange}
-          required
         />
 
         <label htmlFor="lastName">Last Name</label>
