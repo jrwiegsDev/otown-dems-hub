@@ -15,9 +15,11 @@ const Banner = () => {
         
         // Find the next upcoming event
         const now = new Date();
+        const today = now.toISOString().slice(0, 10); // Get today in YYYY-MM-DD format
+        
         const upcomingEvents = events.filter(event => {
-          const eventDate = new Date(event.eventDate);
-          return eventDate >= now;
+          const eventDateOnly = event.eventDate.slice(0, 10); // Get event date in YYYY-MM-DD format
+          return eventDateOnly >= today; // Compare date strings directly
         });
         
         // Get the closest upcoming event
@@ -34,7 +36,11 @@ const Banner = () => {
   }, []);
 
   const formatEventDate = (dateString) => {
-    const date = new Date(dateString);
+    // Use the same approach as the Events component to avoid timezone issues
+    const dateOnly = dateString.slice(0, 10); // Get YYYY-MM-DD format
+    const [year, month, day] = dateOnly.split('-');
+    const date = new Date(year, month - 1, day); // Create date in local timezone
+    
     return date.toLocaleDateString('en-US', {
       weekday: 'long',
       year: 'numeric',
