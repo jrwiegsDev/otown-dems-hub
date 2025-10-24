@@ -10,15 +10,43 @@ const MailingListSignup = () => {
     email: '',
   });
   const [status, setStatus] = useState({ loading: false, error: null, success: null });
+  const [emailError, setEmailError] = useState('');
+
+  // Email validation function
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+    
+    // Real-time email validation
+    if (name === 'email') {
+      if (value && !validateEmail(value)) {
+        setEmailError('Please enter a valid email address');
+      } else {
+        setEmailError('');
+      }
+      // Clear any previous status errors when user starts typing
+      if (status.error) {
+        setStatus({ ...status, error: null });
+      }
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // Frontend validation
     if (!formData.email) {
       setStatus({ ...status, error: 'Email address is required.' });
+      return;
+    }
+    
+    if (!validateEmail(formData.email)) {
+      setStatus({ ...status, error: 'Please enter a valid email address.' });
       return;
     }
     
@@ -32,8 +60,11 @@ const MailingListSignup = () => {
       const successMessage = response.data.message || 'Success! Thanks for signing up.';
       setStatus({ loading: false, error: null, success: successMessage });
       setFormData({ firstName: '', lastName: '', email: '' }); // Clear form
+      setEmailError(''); // Clear email error
     } catch (err) {
-      setStatus({ loading: false, error: 'An error occurred. Please try again.', success: null });
+      // Handle specific error messages from backend
+      const errorMessage = err.response?.data?.message || 'An error occurred. Please try again.';
+      setStatus({ loading: false, error: errorMessage, success: null });
       console.error(err);
     }
   };
@@ -70,9 +101,11 @@ const MailingListSignup = () => {
           value={formData.email}
           onChange={handleChange}
           required
+          className={emailError ? 'error' : ''}
         />
+        {emailError && <span className="error-text">{emailError}</span>}
         
-        <button type="submit" disabled={status.loading}>
+        <button type="submit" disabled={status.loading || emailError}>
           {status.loading ? 'Subscribing...' : 'Subscribe'}
         </button>
       </form>
