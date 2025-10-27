@@ -6,6 +6,7 @@ import './App.css';
 // Import all your components and pages
 import Events from './components/Events';
 import Banner from './components/Banner';
+import Announcements from './components/Announcements';
 import MissionStatement from './components/MissionStatement';
 import ThemeToggle from './components/ThemeToggle';
 import LiveUserCount from './components/LiveUserCount';
@@ -34,6 +35,11 @@ const MainPage = () => (
         {/* Banner */}
         <div className="content-tile banner-tile">
           <Banner />
+        </div>
+
+        {/* Announcements */}
+        <div className="content-tile">
+          <Announcements />
         </div>
         
         {/* No Kings */}

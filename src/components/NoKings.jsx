@@ -16,6 +16,7 @@ const NoKings = () => {
       <p>
         The "No Kings" movement is a nationwide, peaceful resistance born from protests against authoritarianism, mobilizing millions to defend our democracy.
       </p>
+      <p>Thank you to everyone who showed up and made their voices heard at No Kings 2.0! Crowd estimates are between 695 - 750 people downtown!!!</p>
       <a 
         href="https://www.nokings.org/" 
         target="_blank" 

@@ -135,6 +135,31 @@
   margin-top: 0;
 }
 
+/* --- Announcements --- */
+.announcements-section {
+  border: 2px solid var(--accent-blue);
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: var(--surface);
+  margin-top: 1rem;
+}
+
+.announcements-section h3 {
+  color: var(--accent-blue);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.announcement-content {
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.announcement-content p {
+  margin: 0.75rem 0;
+}
+
 /* --- Mailing List Form --- */
 .mailing-list-form h3 {
   margin-top: 0;

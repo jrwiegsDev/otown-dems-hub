@@ -13,18 +13,25 @@ const Banner = () => {
         const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/events`);
         const events = response.data;
         
-        // Find the next upcoming event
-        const now = new Date();
-        const today = now.toISOString().slice(0, 10); // Get today in YYYY-MM-DD format
+        // Find the event marked as banner event
+        const bannerEvent = events.find(event => event.isBannerEvent === true);
         
-        const upcomingEvents = events.filter(event => {
-          const eventDateOnly = event.eventDate.slice(0, 10); // Get event date in YYYY-MM-DD format
-          return eventDateOnly >= today; // Compare date strings directly
-        });
-        
-        // Get the closest upcoming event
-        const nextUpcomingEvent = upcomingEvents.length > 0 ? upcomingEvents[0] : null;
-        setNextEvent(nextUpcomingEvent);
+        if (bannerEvent) {
+          setNextEvent(bannerEvent);
+        } else {
+          // Fallback: Find the next upcoming event if no banner event is set
+          const now = new Date();
+          const today = now.toISOString().slice(0, 10); // Get today in YYYY-MM-DD format
+          
+          const upcomingEvents = events.filter(event => {
+            const eventDateOnly = event.eventDate.slice(0, 10); // Get event date in YYYY-MM-DD format
+            return eventDateOnly >= today; // Compare date strings directly
+          });
+          
+          // Get the closest upcoming event
+          const nextUpcomingEvent = upcomingEvents.length > 0 ? upcomingEvents[0] : null;
+          setNextEvent(nextUpcomingEvent);
+        }
       } catch (error) {
         console.error('Error fetching events for banner:', error);
       } finally {
@@ -80,11 +87,6 @@ const Banner = () => {
           <p>No upcoming events scheduled. Check back soon for new events!</p>
         </>
       )}
-      
-      {/* Custom announcements section - you can edit this part for special messages */}
-      <div className="custom-announcements">
-        <p>Thank you to everyone who showed up and made their voices heard at No Kings 2.0! Crowd estimates are between 695 - 750 people downtown!!!</p>
-      </div>
     </div>
   );
 };
