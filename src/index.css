@@ -9,6 +9,9 @@
   --border-color: #ced0d4;
   --accent-gold: #003366; /* CHANGED: A dark navy blue for better contrast */
   --accent-blue: #1877f2;
+  --link-color: #1877f2;
+  --button-hover-bg: #e4e6eb;
+  --tile-bg: #ffffff;
 }
 
 /* --- Dark Mode Variables --- */
@@ -20,6 +23,9 @@ body[data-theme='dark'] {
   --border-color: #30363d;
   --accent-gold: var(--text-primary); /* CHANGED: Make it the same as the primary text (white) */
   --accent-blue: #58a6ff;
+  --link-color: #58a6ff;
+  --button-hover-bg: #21262d;
+  --tile-bg: #161b22;
 }
 
 /* --- Global Styles --- */

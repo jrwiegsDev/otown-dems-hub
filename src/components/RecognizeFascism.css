@@ -1,0 +1,152 @@
+/* src/components/RecognizeFascism.css */
+
+.fascism-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.fascism-container h2 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-primary);
+}
+
+.fascism-intro {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+}
+
+.warning-signs-container {
+  max-height: 500px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--background);
+}
+
+.warning-sign-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.warning-sign-card:hover {
+  border-color: var(--accent-blue);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateX(4px);
+}
+
+.warning-number {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: var(--accent-blue);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.warning-content {
+  flex: 1;
+}
+
+.warning-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.warning-example {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.warning-example strong {
+  color: var(--text-primary);
+}
+
+.fascism-footer {
+  padding: 1rem;
+  background: var(--background);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+.fascism-footer p {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.fascism-footer p:last-child {
+  margin-bottom: 0;
+}
+
+.footer-note {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* Custom scrollbar */
+.warning-signs-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.warning-signs-container::-webkit-scrollbar-track {
+  background: var(--background);
+  border-radius: 4px;
+}
+
+.warning-signs-container::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+.warning-signs-container::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .warning-signs-container {
+    max-height: 400px;
+  }
+
+  .warning-sign-card {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .warning-number {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .warning-title {
+    font-size: 1rem;
+  }
+
+  .warning-example {
+    font-size: 0.9rem;
+  }
+}

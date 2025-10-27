@@ -3,98 +3,26 @@
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 
-// Import all your components and pages
-import Events from './components/Events';
-import Banner from './components/Banner';
-import Announcements from './components/Announcements';
-import MissionStatement from './components/MissionStatement';
-import ThemeToggle from './components/ThemeToggle';
-import LiveUserCount from './components/LiveUserCount';
-import MailingListSignup from './components/MailingListSignup';
-import Donation from './components/Donation';
-import Socials from './components/Socials';
-import NoKings from './components/NoKings';
-import Representatives from './components/Representatives';
+// Import components
+import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+
+// Import pages
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import GetInvolvedPage from './pages/GetInvolvedPage';
+import ResourcesPage from './pages/ResourcesPage';
 import PolicyPage from './pages/PolicyPage';
-
-// This component defines the layout for your main homepage
-const MainPage = () => (
-  <>
-    <h1 className="main-heading">
-      <img src="/OTown-Dems_logo.png" alt="O'Fallon Area Dems Logo" className="header-logo left" />
-        O'Fallon Area Democratic Club
-      <img src="/OTown-Dems_logo.png" alt="O'Fallon Area Dems Logo" className="header-logo right" />
-    </h1>
-    
-    {/* --- NEW UNIFIED GRID LAYOUT --- */}
-    <div className="main-content-grid">
-      
-      {/* --- COLUMN 1: INFORMATIONAL --- */}
-      <div className="grid-column">
-        {/* Banner */}
-        <div className="content-tile banner-tile">
-          <Banner />
-        </div>
-
-        {/* Announcements */}
-        <div className="content-tile">
-          <Announcements />
-        </div>
-        
-        {/* No Kings */}
-        <div className="content-tile">
-          <NoKings />
-        </div>
-
-        {/* Mission Statement */}
-        <div className="content-tile">
-          <MissionStatement />
-        </div>
-      </div>
-      
-      {/* --- COLUMN 2: CALENDAR (MIDDLE - WIDER) --- */}
-      <div className="grid-column">
-        {/* Calendar */}
-        <div className="content-tile calendar-tile">
-          <Events />
-        </div>
-
-        {/* Representatives */}
-        <div className="content-tile">
-          <Representatives />
-        </div>
-      </div>
-      
-      {/* --- COLUMN 3: ACTION --- */}
-      <div className="grid-column">
-        {/* Mailing List */}
-        <div className="content-tile">
-          <MailingListSignup />
-        </div>
-
-        {/* Donation */}
-        <div className="content-tile donation-tile">
-          <Donation />
-        </div>
-
-        {/* Socials */}
-        <div className="content-tile">
-          <Socials />
-        </div>
-      </div>
-      
-    </div>
-  </>
-);
 
 function App() {
   return (
     <div className="main-container">
-      <ThemeToggle />
-      <LiveUserCount />
+      <Navbar />
       <Routes>
-        <Route path="/" element={<MainPage />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/get-involved" element={<GetInvolvedPage />} />
+        <Route path="/resources" element={<ResourcesPage />} />
         <Route path="/privacy-policy" element={<PolicyPage />} />
       </Routes>
       <Footer />
