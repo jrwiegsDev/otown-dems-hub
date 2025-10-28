@@ -1,6 +1,7 @@
 // src/pages/ResourcesPage.jsx
 
-import RecognizeFascism from '../components/RecognizeFascism';
+import NeedSupport from '../components/NeedSupport';
+import Healthcare from '../components/Healthcare';
 
 const ResourcesPage = () => {
   return (
@@ -30,12 +31,9 @@ const ResourcesPage = () => {
         {/* Column 2 */}
         <div className="grid-column">
           <div className="content-tile">
-            <RecognizeFascism />
+            <NeedSupport />
           </div>
-        </div>
 
-        {/* Column 3 */}
-        <div className="grid-column">
           <div className="content-tile">
             <h2>✅ Fact-Check Resources</h2>
             <p>
@@ -43,13 +41,12 @@ const ResourcesPage = () => {
             </p>
             <p><em>Resources coming soon...</em></p>
           </div>
+        </div>
 
+        {/* Column 3 */}
+        <div className="grid-column">
           <div className="content-tile">
-            <h2>💙 Need Support?</h2>
-            <p>
-              These local organizations are here to help our community members.
-            </p>
-            <p><em>Organization directory coming soon...</em></p>
+            <Healthcare />
           </div>
         </div>
       </div>

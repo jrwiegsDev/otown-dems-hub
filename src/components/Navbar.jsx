@@ -38,6 +38,12 @@ const Navbar = () => {
           >
             Resources
           </NavLink>
+          <NavLink 
+            to="/democracy-dashboard" 
+            className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+          >
+            Democracy Dashboard
+          </NavLink>
         </div>
         
         <div className="navbar-right">

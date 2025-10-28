@@ -1,0 +1,185 @@
+/* src/components/Healthcare.css */
+
+.healthcare-tile {
+  display: flex;
+  flex-direction: column;
+}
+
+.healthcare-tile h2 {
+  margin: 0 0 0.75rem 0;
+  color: var(--accent-blue);
+}
+
+.healthcare-content {
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+/* Custom scrollbar styling */
+.healthcare-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.healthcare-content::-webkit-scrollbar-track {
+  background: var(--surface);
+  border-radius: 4px;
+}
+
+.healthcare-content::-webkit-scrollbar-thumb {
+  background: var(--accent-blue);
+  border-radius: 4px;
+}
+
+.healthcare-content::-webkit-scrollbar-thumb:hover {
+  background: #1e40af;
+}
+
+.healthcare-logo {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin: 0 auto 1rem;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.healthcare-logo:hover {
+  transform: scale(1.05);
+}
+
+.intro-text {
+  margin: 0 0 1.5rem 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.faq-section {
+  margin-bottom: 1.5rem;
+}
+
+.faq-section h3 {
+  margin: 0 0 1rem 0;
+  color: var(--accent-blue);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.faq-item {
+  border: 1px solid var(--surface);
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--tile-bg);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.faq-question:hover {
+  background: var(--surface);
+}
+
+.faq-question.active {
+  background: var(--surface);
+  color: var(--accent-blue);
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent-blue);
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  background: var(--background);
+}
+
+.faq-answer.open {
+  max-height: 500px;
+  padding: 0.75rem 1rem;
+}
+
+.faq-answer p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.healthcare-link {
+  display: inline-block;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.6rem 1.25rem;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+}
+
+.healthcare-link:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.4);
+}
+
+.healthcare-link:active {
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .healthcare-content {
+    max-height: 400px;
+  }
+
+  .healthcare-logo {
+    max-width: 150px;
+  }
+
+  .faq-question {
+    font-size: 0.85rem;
+    padding: 0.6rem 0.75rem;
+  }
+
+  .faq-answer p {
+    font-size: 0.8rem;
+  }
+
+  .faq-icon {
+    font-size: 1.25rem;
+  }
+}

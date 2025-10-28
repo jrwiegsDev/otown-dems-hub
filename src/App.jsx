@@ -12,6 +12,7 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import GetInvolvedPage from './pages/GetInvolvedPage';
 import ResourcesPage from './pages/ResourcesPage';
+import DemocracyDashboard from './pages/DemocracyDashboard';
 import PolicyPage from './pages/PolicyPage';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/get-involved" element={<GetInvolvedPage />} />
         <Route path="/resources" element={<ResourcesPage />} />
+        <Route path="/democracy-dashboard" element={<DemocracyDashboard />} />
         <Route path="/privacy-policy" element={<PolicyPage />} />
       </Routes>
       <Footer />

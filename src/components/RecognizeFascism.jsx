@@ -1,8 +1,11 @@
 // src/components/RecognizeFascism.jsx
 
+import { useState } from 'react';
 import './RecognizeFascism.css';
 
 const RecognizeFascism = () => {
+  const [selectedSign, setSelectedSign] = useState(null);
+
   const warningSigns = [
     {
       sign: "Powerful & Continuing Nationalism",
@@ -65,34 +68,40 @@ const RecognizeFascism = () => {
   return (
     <div className="fascism-container">
       <h2>⚠️ Recognize the Warning Signs of Fascism</h2>
-      <p className="fascism-intro">
-        These aren't just policy differences—these are attempts to overthrow democracy for fascism. 
-        Educate yourself on the 14 warning signs and current examples from the Trump administration.
-      </p>
-
-      <div className="warning-signs-container">
-        {warningSigns.map((item, index) => (
-          <div key={index} className="warning-sign-card">
-            <div className="warning-number">{index + 1}</div>
-            <div className="warning-content">
-              <h3 className="warning-title">{item.sign}</h3>
-              <p className="warning-example">
-                <strong>Current Example:</strong> {item.example}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="fascism-footer">
+      <div className="fascism-intro-box">
         <p>
           <strong>Stay informed. Stay vigilant. Defend democracy.</strong>
         </p>
-        <p className="footer-note">
+        <p className="intro-note">
           These warning signs are based on historical patterns of authoritarian regimes 
           and are crucial for recognizing threats to democratic institutions.
         </p>
       </div>
+
+      <div className="warning-signs-grid">
+        {warningSigns.map((item, index) => (
+          <button
+            key={index}
+            className={`warning-sign-card ${selectedSign === index ? 'active' : ''}`}
+            onClick={() => setSelectedSign(selectedSign === index ? null : index)}
+          >
+            <div className="warning-number">{index + 1}</div>
+            <div className="warning-title">{item.sign}</div>
+          </button>
+        ))}
+      </div>
+
+      {selectedSign !== null && (
+        <div className="selected-example">
+          <h3>{warningSigns[selectedSign].sign}</h3>
+          <p><strong>Current Example:</strong> {warningSigns[selectedSign].example}</p>
+        </div>
+      )}
+
+      <p className="fascism-footer-text">
+        These aren't just policy differences—these are attempts to overthrow democracy for fascism. 
+        Click any sign to see current examples from the Trump administration.
+      </p>
     </div>
   );
 };

@@ -1,0 +1,190 @@
+/* src/components/CongressWorkTracker.css */
+
+.congress-tracker {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.congress-tracker h2 {
+  margin: 0;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.tracker-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.chamber-section {
+  background: var(--surface);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.chamber-section h3 {
+  margin: 0 0 1rem 0;
+  color: var(--accent-blue);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.stat-box {
+  background: var(--background);
+  padding: 0.75rem;
+  border-radius: 6px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+}
+
+.stat-box.highlight {
+  border-color: #dc2626;
+  background: rgba(220, 38, 38, 0.05);
+}
+
+.stat-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.stat-box.highlight .stat-value {
+  color: #dc2626;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background: var(--background);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #dc2626 0%, #ef4444 100%);
+  transition: width 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.salary-info {
+  background: var(--background);
+  padding: 0.75rem;
+  border-radius: 6px;
+  border-left: 4px solid var(--accent-blue);
+}
+
+.salary-info p {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.salary-info p:last-child {
+  margin-bottom: 0;
+}
+
+.salary-info strong {
+  color: var(--text-primary);
+}
+
+.accountability-box {
+  background: #fef2f2;
+  border: 2px solid #fecaca;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.accountability-box p {
+  margin: 0 0 0.75rem 0;
+  color: #991b1b;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+.accountability-box p:last-child {
+  margin-bottom: 0;
+}
+
+.action-text {
+  text-align: center;
+  font-size: 1rem !important;
+}
+
+.action-text strong {
+  color: #7f1d1d;
+}
+
+.update-note {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin: 0;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .accountability-box {
+    background: rgba(220, 38, 38, 0.1);
+    border-color: rgba(220, 38, 38, 0.3);
+  }
+  
+  .accountability-box p {
+    color: #fca5a5;
+  }
+  
+  .action-text strong {
+    color: #fecaca;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+
+  .chamber-section {
+    padding: 1rem;
+  }
+
+  .salary-info p {
+    font-size: 0.8rem;
+  }
+}
