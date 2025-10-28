@@ -18,9 +18,12 @@ const AboutPage = () => {
         <div className="grid-column">
           <div className="content-tile">
             <h2>Leadership</h2>
-            <p>
-              Content coming soon - meet our leadership team and board members.
-            </p>
+            <ul>
+              <li>President: <strong>Dennis Muyleart</strong></li>
+              <li>Vice President: <strong>Roy Carney</strong></li>
+              <li>Community Outreach: <strong>Sarah L. Cunningham</strong></li>
+              <li>Community Outreach: <strong>Kendra Paulson</strong></li>
+            </ul>
           </div>
         </div>
 

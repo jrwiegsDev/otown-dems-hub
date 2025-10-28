@@ -476,6 +476,55 @@
   transform: scale(1.05);
 }
 
+/* --- Goods Unite Us Tile --- */
+.goods-unite-us-tile {
+  text-align: center;
+}
+
+.goods-unite-us-tile h3 {
+  margin-top: 0;
+  color: var(--accent-blue);
+  margin-bottom: 0.5rem;
+}
+
+.goods-logo {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.goods-logo:hover {
+  transform: scale(1.05);
+}
+
+.goods-unite-us-tile p {
+  color: var(--text-secondary);
+  margin: 0.5rem 0;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.goods-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 8px 16px;
+  background-color: var(--accent-blue);
+  color: white;
+  font-weight: bold;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.goods-link:hover {
+  background-color: #1e40af;
+  transform: scale(1.05);
+}
+
 /* ==========================================================================
    Footer & Policy Page
    ========================================================================== */

@@ -2,6 +2,8 @@
 
 import NoKings from '../components/NoKings';
 import BannedBooks from '../components/BannedBooks';
+import PledgeToVote from '../components/PledgeToVote';
+import EconomicAction from '../components/EconomicAction';
 
 const GetInvolvedPage = () => {
   return (
@@ -12,7 +14,11 @@ const GetInvolvedPage = () => {
         {/* Column 1 */}
         <div className="grid-column">
           <div className="content-tile">
-            <NoKings />
+            <h2>🤝 Help Your Neighbors</h2>
+            <p>
+              Able to help? Consider donating to these local organizations that support our community.
+            </p>
+            <p><em>Organization directory coming soon...</em></p>
           </div>
 
           <div className="content-tile">
@@ -21,13 +27,6 @@ const GetInvolvedPage = () => {
               Make your voice heard through petitions and direct calls to representatives.
             </p>
             <p><em>Resources and links coming soon...</em></p>
-          </div>
-        </div>
-
-        {/* Column 2 */}
-        <div className="grid-column">
-          <div className="content-tile">
-            <BannedBooks />
           </div>
 
           <div className="content-tile">
@@ -39,22 +38,25 @@ const GetInvolvedPage = () => {
           </div>
         </div>
 
-        {/* Column 3 */}
+        {/* Column 2 */}
         <div className="grid-column">
           <div className="content-tile">
-            <h2>💰 Economic Action</h2>
-            <p>
-              Learn how to use your purchasing power to support democracy and democratic values.
-            </p>
-            <p><em>Resources and action plans coming soon...</em></p>
+            <EconomicAction />
           </div>
 
           <div className="content-tile">
-            <h2>🤝 Help Your Neighbors</h2>
-            <p>
-              Able to help? Consider donating to these local organizations that support our community.
-            </p>
-            <p><em>Organization directory coming soon...</em></p>
+            <NoKings />
+          </div>
+        </div>
+
+        {/* Column 3 */}
+        <div className="grid-column">
+          <div className="content-tile">
+            <PledgeToVote />
+          </div>
+
+          <div className="content-tile">
+            <BannedBooks />
           </div>
         </div>
       </div>

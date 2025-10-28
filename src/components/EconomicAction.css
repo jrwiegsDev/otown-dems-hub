@@ -1,0 +1,126 @@
+.economic-action-tile {
+  display: flex;
+  flex-direction: column;
+}
+
+.economic-action-tile h2 {
+  margin: 0 0 0.75rem 0;
+  color: var(--accent-blue);
+}
+
+.intro-text {
+  margin: 0 0 1rem 0;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.economic-resources {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+/* Custom scrollbar styling */
+.economic-resources::-webkit-scrollbar {
+  width: 8px;
+}
+
+.economic-resources::-webkit-scrollbar-track {
+  background: var(--surface);
+  border-radius: 4px;
+}
+
+.economic-resources::-webkit-scrollbar-thumb {
+  background: var(--accent-blue);
+  border-radius: 4px;
+}
+
+.economic-resources::-webkit-scrollbar-thumb:hover {
+  background: #1e40af;
+}
+
+.resource-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.25rem;
+  background: var(--tile-bg);
+  border: 1px solid var(--surface);
+  border-radius: 8px;
+  gap: 0.75rem;
+}
+
+.resource-item h3 {
+  margin: 0;
+  color: var(--accent-blue);
+  font-size: 1.25rem;
+}
+
+.resource-item a {
+  display: inline-block;
+}
+
+.resource-logo {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.resource-logo:hover {
+  transform: scale(1.05);
+}
+
+.resource-item p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.resource-link {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+}
+
+.resource-link:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.4);
+}
+
+.resource-link:active {
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .economic-resources {
+    max-height: 400px;
+  }
+
+  .resource-item {
+    padding: 1rem;
+  }
+
+  .resource-logo {
+    max-width: 100px;
+  }
+
+  .resource-item p {
+    font-size: 0.85rem;
+  }
+}
