@@ -31,6 +31,11 @@ const HomePage = () => {
           <div className="content-tile">
             <Announcements />
           </div>
+
+          {/* Donation */}
+          <div className="content-tile donation-tile">
+            <Donation />
+          </div>
         </div>
         
         {/* --- COLUMN 2: CALENDAR (MIDDLE - WIDER) --- */}
@@ -56,11 +61,6 @@ const HomePage = () => {
           {/* Mailing List */}
           <div className="content-tile">
             <MailingListSignup />
-          </div>
-
-          {/* Donation */}
-          <div className="content-tile donation-tile">
-            <Donation />
           </div>
         </div>
         

@@ -2,6 +2,7 @@
 
 import MissionStatement from '../components/MissionStatement';
 import Socials from '../components/Socials';
+import Donation from '../components/Donation';
 
 const AboutPage = () => {
   return (
@@ -30,6 +31,10 @@ const AboutPage = () => {
         <div className="grid-column">
           <div className="content-tile">
             <Socials />
+          </div>
+
+          <div className="content-tile donation-tile">
+            <Donation />
           </div>
         </div>
       </div>
