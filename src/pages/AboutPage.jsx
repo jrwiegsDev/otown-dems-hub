@@ -24,6 +24,7 @@ const AboutPage = () => {
               <li>Vice President: <strong>Roy Carney</strong></li>
               <li>Community Outreach: <strong>Sarah L. Cunningham</strong></li>
               <li>Community Outreach: <strong>Kendra Paulson</strong></li>
+              <li>Youth Engagement Chair: <strong>Andrea Fohne</strong></li>
             </ul>
           </div>
         </div>
