@@ -1,9 +1,10 @@
 // src/pages/GetInvolvedPage.jsx
 
-import NoKings from '../components/NoKings';
+import ActiveOrganizations from '../components/ActiveOrganizations';
 import BannedBooks from '../components/BannedBooks';
 import PledgeToVote from '../components/PledgeToVote';
 import EconomicAction from '../components/EconomicAction';
+import PetitionsAndCalls from '../components/PetitionsAndCalls';
 
 const GetInvolvedPage = () => {
   return (
@@ -22,11 +23,7 @@ const GetInvolvedPage = () => {
           </div>
 
           <div className="content-tile">
-            <h2>📞 Petitions & Calls</h2>
-            <p>
-              Make your voice heard through petitions and direct calls to representatives.
-            </p>
-            <p><em>Resources and links coming soon...</em></p>
+            <PetitionsAndCalls />
           </div>
 
           <div className="content-tile">
@@ -45,7 +42,7 @@ const GetInvolvedPage = () => {
           </div>
 
           <div className="content-tile">
-            <NoKings />
+            <ActiveOrganizations />
           </div>
         </div>
 

@@ -78,7 +78,17 @@ const Banner = () => {
             )}
           </p>
           {nextEvent.eventDescription && (
-            <p>{nextEvent.eventDescription}</p>
+            <p style={{ whiteSpace: 'pre-line' }}>{nextEvent.eventDescription}</p>
+          )}
+          {nextEvent.eventLink && (
+            <a 
+              href={nextEvent.eventLink} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="banner-event-link"
+            >
+              {nextEvent.eventLinkText || 'Learn More'} →
+            </a>
           )}
         </>
       ) : (

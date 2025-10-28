@@ -251,7 +251,7 @@ const WeeklyPoll = () => {
           <h3>Live Results</h3>
           <p className="total-votes">Total Votes: {results.totalVotes}</p>
           <div className="results-list">
-            {ISSUES.map((issue) => {
+            {(results.issues || ISSUES).map((issue) => {
               const count = results.issueCounts[issue] || 0;
               const percentage = getPercentage(count);
               return (
