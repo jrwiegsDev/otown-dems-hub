@@ -9,8 +9,8 @@ const PolicyPage = () => {
       <Link to="/" className="back-link">&larr; Back to Home</Link>
 
       <h1>PRIVACY POLICY & TERMS OF SERVICE</h1>
-      <p><strong>Last Updated: October 12, 2025</strong></p>
-      <p>The O'Fallon Area Democratic Club (“we,” or “us”) cares about your privacy rights and providing you with the information you need to protect them. Accordingly, we've created this policy to explain our privacy practices. This policy applies to ofallonildems.org only.</p>
+      <p><strong>Last Updated: October 29, 2025</strong></p>
+      <p>The O'Fallon Area Democratic Club ("we," or "us") cares about your privacy rights and providing you with the information you need to protect them. Accordingly, we've created this policy to explain our privacy practices. This policy applies to ofallonildems.org only.</p>
       <p>We may revise and update this policy if our practices change or if we add or change features on the site. You should refer back to this page often for the latest information.</p>
 
       <hr />
@@ -21,9 +21,18 @@ const PolicyPage = () => {
       <hr />
 
       <h2>INFORMATION COLLECTED ABOUT YOU</h2>
-      <p>We collect personal information when you sign up for our mailing list on our site. Personal information we collect includes your first name and email address. Providing your last name is optional.</p>
-      <p>When making a contribution via a third-party service like ActBlue, you will be subject to their terms and privacy policy. We may receive personal information from that processor as required by campaign finance law, such as your name, mailing address, occupation, and name of employer. We do not collect or store your credit card or bank account information on our Sites.</p>
-      <p><strong>Automatically Collected Information:</strong> We automatically receive certain types of information when you interact with us online. For example, our systems may automatically collect your IP address and the type of browser you use. This information may be collected through the use of “cookies.”</p>
+      <p><strong>Mailing List:</strong> We collect personal information when you sign up for our mailing list on our site. Personal information we collect includes your email address. Providing your first and last name is optional.</p>
+      <p><strong>Volunteer Sign-Up:</strong> When you sign up to volunteer, we collect your first name, last name, email address, and your availability preferences (which days work best for you). This information is used solely to coordinate volunteer opportunities and will be shared only with our Community Outreach team members. We retain volunteer information until you request removal by contacting us at <strong>ofallondems@gmail.com</strong>.</p>
+      <p><strong>Weekly Poll:</strong> Our optional Weekly Community Poll feature collects your email address solely for spam prevention purposes. Your email is used only to ensure you can vote once per week and is automatically deleted after 7 days. We do not use this email for any other purpose, and it is never added to our mailing list or shared with any third parties. The poll results themselves are completely anonymous and aggregated.</p>
+      <p><strong>Donations:</strong> When making a contribution via a third-party service like ActBlue, you will be subject to their terms and privacy policy. We may receive personal information from that processor as required by campaign finance law, such as your name, mailing address, occupation, and name of employer. We do not collect or store your credit card or bank account information on our Sites.</p>
+      <p><strong>Automatically Collected Information:</strong> We automatically receive certain types of information when you interact with us online. For example, our systems may automatically collect your IP address and the type of browser you use. This information may be collected through the use of "cookies."</p>
+      
+      <hr />
+
+      <h2>DATA RETENTION</h2>
+      <p><strong>Mailing List Data:</strong> We retain your mailing list information until you request removal or unsubscribe.</p>
+      <p><strong>Volunteer Data:</strong> We retain your volunteer information until you request removal by contacting us at <strong>ofallondems@gmail.com</strong>.</p>
+      <p><strong>Weekly Poll Data:</strong> Email addresses submitted for poll voting are automatically deleted after 7 days. Poll results (issue selection data) are stored anonymously with no personally identifiable information.</p>
       
       <hr />
 
@@ -55,7 +64,7 @@ const PolicyPage = () => {
       <hr />
 
       <h2>LINKS TO OTHER SITES</h2>
-      <p>We may provide links to third-party websites as a service to our visitors. We are not responsible for the content or information collection practices of those sites. Their privacy policies may differ from ours, and we encourage you to review their policies before providing them with information.</p>
+      <p>We may provide links to third-party websites as a service to our visitors, including but not limited to GoodsUniteUs, NoKings.org, Project2025.observer, Blackout the System, OpenSecrets, ActBlue, and various government and civic engagement sites. We are not responsible for the content or information collection practices of those sites. Their privacy policies may differ from ours, and we encourage you to review their policies before providing them with information.</p>
 
       <hr />
 

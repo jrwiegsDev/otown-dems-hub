@@ -3,6 +3,7 @@
 import MissionStatement from '../components/MissionStatement';
 import Socials from '../components/Socials';
 import Donation from '../components/Donation';
+import AboutThisSite from '../components/AboutThisSite';
 
 const AboutPage = () => {
   return (
@@ -26,6 +27,10 @@ const AboutPage = () => {
               <li>Community Outreach: <strong>Kendra Paulson</strong></li>
               <li>Youth Engagement Chair: <strong>Andrea Fohne</strong></li>
             </ul>
+          </div>
+
+          <div className="content-tile">
+            <AboutThisSite />
           </div>
         </div>
 
