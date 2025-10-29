@@ -47,6 +47,9 @@
   border-radius: 6px;
   border-left: 4px solid transparent;
   transition: transform 0.2s ease;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 .spending-card:hover {
@@ -74,6 +77,9 @@
   color: var(--text-primary);
   font-size: 0.9rem;
   line-height: 1.3;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .spending-cost {
@@ -151,6 +157,8 @@
   border: 2px solid #fecaca;
   border-radius: 8px;
   padding: 1rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .priorities-box p {
@@ -158,6 +166,8 @@
   color: #991b1b;
   line-height: 1.6;
   font-size: 0.9rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .priorities-box p:last-child {
@@ -214,27 +224,100 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .spending-tracker h2 {
+    font-size: 1.25rem;
+  }
+
+  .spending-subtitle {
+    font-size: 0.85rem;
+  }
+
   .spending-section {
-    padding: 1rem;
+    padding: 0.875rem;
+  }
+
+  .spending-card {
+    padding: 0.75rem;
   }
 
   .spending-header {
     flex-direction: column;
     gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .spending-title {
+    font-size: 0.875rem;
+    word-break: break-word;
   }
 
   .spending-cost,
   .spending-impact {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    align-self: flex-start;
+  }
+
+  .spending-description {
+    font-size: 0.8rem;
+  }
+
+  .spending-meta {
+    font-size: 0.7rem;
+    gap: 0.25rem;
   }
 
   .total-box {
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;
+    padding: 0.75rem;
   }
 
   .total-amount {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+  }
+
+  .priorities-box {
+    padding: 0.875rem;
+  }
+
+  .priorities-box p {
+    font-size: 0.85rem;
+  }
+
+  .priorities-emphasis {
+    font-size: 0.95rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .spending-tracker h2 {
+    font-size: 1.1rem;
+  }
+
+  .spending-section {
+    padding: 0.75rem;
+  }
+
+  .spending-card {
+    padding: 0.65rem;
+  }
+
+  .spending-title {
+    font-size: 0.8rem;
+  }
+
+  .spending-cost,
+  .spending-impact {
+    font-size: 0.95rem;
+  }
+
+  .spending-description {
+    font-size: 0.75rem;
+  }
+
+  .program-budget {
+    font-size: 0.8rem;
+    padding: 0.4rem;
   }
 }

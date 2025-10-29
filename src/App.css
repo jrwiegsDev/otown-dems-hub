@@ -7,6 +7,7 @@
   min-height: 100vh;
   padding: 2rem;
   box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 /* ==========================================================================
@@ -91,6 +92,9 @@
   display: flex;
   flex-direction: column;
   gap: 2rem; /* Vertical space between tiles in a column */
+  min-width: 0; /* Allow flex items to shrink below content size */
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .content-tile {
@@ -98,6 +102,11 @@
   border: 1px solid var(--accent-gold);
   border-radius: 8px;
   padding: 1.5rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  overflow-x: hidden;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /* ==========================================================================
@@ -703,6 +712,7 @@
   max-width: 1400px;
   margin: 0 auto;
   padding: 1rem;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .page-container h1 {
@@ -710,6 +720,7 @@
   text-align: center;
   margin-bottom: 2rem;
   font-size: 2.5rem;
+  word-wrap: break-word;
 }
 
 .page-container h2 {
