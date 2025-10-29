@@ -77,3 +77,54 @@
     padding-left: 20px;
     margin-bottom: 0.5rem;
 }
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .fc .fc-toolbar {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .fc .fc-toolbar-title {
+        font-size: 1.1rem;
+    }
+
+    .fc .fc-button {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.6rem;
+    }
+
+    .fc .fc-col-header-cell-cushion {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.25rem;
+    }
+
+    .fc .fc-daygrid-day-number {
+        font-size: 0.85rem;
+        padding: 0.25rem;
+    }
+
+    .fc-event-title {
+        font-size: 0.75rem;
+    }
+
+    .event-details {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .fc .fc-toolbar-title {
+        font-size: 1rem;
+    }
+
+    .fc .fc-button {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.5rem;
+    }
+
+    .fc .fc-col-header-cell-cushion {
+        font-size: 0.75rem;
+    }
+}

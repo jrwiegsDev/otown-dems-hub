@@ -5,6 +5,7 @@ import { FaUsers } from 'react-icons/fa';
 
 const LiveUserCount = () => {
   const [userCount, setUserCount] = useState(0);
+  const [isConnected, setIsConnected] = useState(false);
   const ws = useRef(null); // Use useRef to hold the WebSocket connection
 
   useEffect(() => {
@@ -19,14 +20,17 @@ const LiveUserCount = () => {
 
     ws.current.onopen = () => {
       console.log('WebSocket Connected');
+      setIsConnected(true);
     };
 
     ws.current.onclose = () => {
       console.log('WebSocket Disconnected');
+      setIsConnected(false);
     };
 
     ws.current.onerror = (error) => {
       console.error('WebSocket Error:', error);
+      setIsConnected(false);
     };
 
     // --- Listen for messages from the server ---
@@ -49,15 +53,16 @@ const LiveUserCount = () => {
     };
   }, []); // Empty dependency array ensures this runs only once on mount
 
+  // Only show the component when connected and have a count
+  if (!isConnected || userCount === 0) {
+    return null;
+  }
+
   return (
     <div className="live-user-count">
-      {/* --- UPDATED: Added icon and span for text --- */}
-      <FaUsers className="user-count-icon" /> {/* <-- 2. Add the icon component */}
+      <FaUsers className="user-count-icon" />
       <span className="user-count-text">
-        {userCount > 0 
-          ? `${userCount} ${userCount === 1 ? 'Neighbor' : 'Neighbors'} Online!` 
-          : 'Connecting...'
-        }
+        {userCount} {userCount === 1 ? 'Neighbor' : 'Neighbors'} Online!
       </span>
     </div>
   );

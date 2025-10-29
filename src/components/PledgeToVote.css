@@ -54,3 +54,29 @@
 .pledge-link:active {
   transform: translateY(0);
 }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .pledge-tile h3 {
+    font-size: 1.25rem;
+  }
+
+  .pledge-logo {
+    max-width: 200px;
+  }
+
+  .pledge-link {
+    width: 100%;
+    padding: 0.875rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pledge-logo {
+    max-width: 150px;
+  }
+
+  .pledge-tile p {
+    font-size: 0.9rem;
+  }
+}

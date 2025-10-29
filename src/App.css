@@ -83,6 +83,8 @@
   grid-template-columns: 0.7fr 1.3fr 1.0fr; /* Column 1: ~23%, Column 2: calendar width, Column 3: wider for poll */
   gap: 2rem; /* Space between the three columns */
   align-items: start; /* THIS IS THE KEY: Prevents columns from stretching to equal height, fixing the whitespace issue. */
+  max-width: 1400px; /* Prevent tiles from being too wide */
+  margin: 0 auto; /* Center the grid */
 }
 
 .grid-column {
@@ -728,6 +730,8 @@
 /* ==========================================================================
    Responsive Styles
    ========================================================================== */
+
+/* Tablet breakpoint */
 @media (max-width: 1024px) {
   /* Switch grid to a single column on smaller screens */
   .main-content-grid {
@@ -737,5 +741,163 @@
   /* Reset calendar min-height on mobile to avoid excessive space */
   .calendar-tile {
     min-height: auto;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+  /* Reduce main container padding to match page-container */
+  .main-container {
+    padding: 1rem;
+  }
+
+  /* Responsive header/heading styles */
+  .main-heading {
+    font-size: 1.5rem;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+  }
+
+  .header-logo {
+    height: 40px;
+  }
+
+  /* Reduce tile padding for better mobile fit */
+  .content-tile {
+    padding: 1rem;
+  }
+
+  /* Smaller headings in tiles */
+  .content-tile h2 {
+    font-size: 1.25rem;
+  }
+
+  .content-tile h3 {
+    font-size: 1.15rem;
+  }
+
+  /* Make buttons full-width with bigger touch targets */
+  .donation-button,
+  .pledge-link,
+  .resource-link,
+  .goods-link,
+  .no-kings-link,
+  .banner-event-link,
+  .rep-contact-link {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    text-align: center;
+  }
+
+  /* Reduce grid gap for tighter mobile layout */
+  .main-content-grid {
+    gap: 1.5rem;
+  }
+
+  .grid-column {
+    gap: 1.5rem;
+  }
+
+  /* Adjust rep cards for mobile */
+  .rep-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .rep-photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .rep-contact {
+    border-left: none;
+    border-top: 1px solid var(--border-color);
+    padding-left: 0;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    min-width: unset;
+  }
+
+  .rep-filter-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .rep-filter-btn {
+    width: 100%;
+  }
+
+  /* Mobile form improvements */
+  .days-checkboxes {
+    grid-template-columns: 1fr;
+  }
+
+  .checkbox-label {
+    padding: 0.75rem 1rem;
+  }
+
+  /* Socials icon sizing */
+  .socials-icon-container {
+    gap: 1.5rem;
+  }
+
+  .socials-icon-container a {
+    font-size: 2rem;
+  }
+
+  /* Page container improvements */
+  .page-container {
+    padding: 1rem;
+  }
+
+  .page-container h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Small mobile breakpoint */
+@media (max-width: 480px) {
+  .main-container {
+    padding: 0.75rem;
+  }
+
+  .main-heading {
+    font-size: 1.25rem;
+    gap: 6px;
+  }
+
+  .header-logo {
+    height: 32px;
+  }
+
+  .content-tile {
+    padding: 0.875rem;
+  }
+
+  .main-content-grid {
+    gap: 1rem;
+  }
+
+  .grid-column {
+    gap: 1rem;
+  }
+
+  /* Smaller social icons on very small screens */
+  .socials-icon-container a {
+    font-size: 1.75rem;
+  }
+
+  /* Further reduce page heading */
+  .page-container h1 {
+    font-size: 1.75rem;
+  }
+
+  /* Tighter checkbox labels */
+  .checkbox-label {
+    padding: 0.6rem 0.875rem;
+    font-size: 0.9rem;
   }
 }

@@ -26,7 +26,6 @@
   flex: 0 0 auto;
   display: flex;
   align-items: center;
-  min-width: 180px; /* Ensure space for user count and theme toggle */
 }
 
 .navbar-left {
@@ -88,6 +87,8 @@
   .navbar-left,
   .navbar-right {
     order: 2;
+    min-width: 0; /* Remove min-width constraint */
+    flex: 0 1 auto;
   }
 
   .navbar-center {
@@ -111,9 +112,26 @@
     font-size: 0.95rem;
     padding: 0.4rem 0.7rem;
   }
+
+  /* Make user count and theme toggle more compact */
+  .live-user-count {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    gap: 6px;
+  }
+
+  .theme-toggle-button {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 480px) {
+  .navbar-container {
+    padding: 0.5rem 0.75rem;
+  }
+
   .navbar-center {
     gap: 0.25rem;
   }
@@ -121,5 +139,16 @@
   .nav-link {
     font-size: 0.85rem;
     padding: 0.3rem 0.5rem;
+  }
+
+  .live-user-count {
+    padding: 5px 8px;
+    font-size: 0.8rem;
+  }
+
+  .theme-toggle-button {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
   }
 }

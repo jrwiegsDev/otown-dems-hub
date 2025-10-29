@@ -125,4 +125,27 @@
   .resource-item p {
     font-size: 0.85rem;
   }
+
+  .resource-link {
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .active-orgs-tile h2 {
+    font-size: 1.25rem;
+  }
+
+  .intro-text {
+    font-size: 0.9rem;
+  }
+
+  .resource-item {
+    padding: 0.875rem;
+  }
+
+  .resource-logo {
+    max-width: 80px;
+  }
 }
