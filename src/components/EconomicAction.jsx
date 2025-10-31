@@ -24,10 +24,6 @@ const EconomicAction = () => {
             by strategically withdrawing labor and spending. Build resilient local communities independent of 
             corrupt systems.
           </p>
-          <p className="site-notice" style={{ fontStyle: 'italic', color: '#d97706' }}>
-            ⚠️ We are aware that the link no longer works; this is a problem on Blackout The System's end. 
-            Sorry for the inconvenience.
-          </p>
           <a 
             href="https://blackoutthesystem.com/" 
             target="_blank" 

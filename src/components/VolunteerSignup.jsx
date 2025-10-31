@@ -3,14 +3,19 @@
 import { useState } from 'react';
 import axios from 'axios';
 
-const DAYS_OF_WEEK = [
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday',
-  'Sunday'
+const VOLUNTEER_PROGRAMS = [
+  'Adopt A Highway',
+  'Christmas Toy Drive',
+  'Thanksgiving Meal Drive',
+  'Food Pantry Support',
+  'Community Garden',
+  'Literacy Tutoring',
+  'Senior Outreach',
+  'Voter Registration',
+  'School Supply Drive',
+  'Winter Coat Drive',
+  'Book Drive',
+  'Community Clean-Up Events'
 ];
 
 const VolunteerSignup = () => {
@@ -18,7 +23,7 @@ const VolunteerSignup = () => {
     firstName: '',
     lastName: '',
     email: '',
-    availableDays: []
+    interestedPrograms: []
   });
   const [status, setStatus] = useState({ loading: false, error: null, success: null });
   const [emailError, setEmailError] = useState('');
@@ -47,12 +52,12 @@ const VolunteerSignup = () => {
     }
   };
 
-  const handleDayToggle = (day) => {
+  const handleProgramToggle = (program) => {
     setFormData(prev => {
-      const availableDays = prev.availableDays.includes(day)
-        ? prev.availableDays.filter(d => d !== day)
-        : [...prev.availableDays, day];
-      return { ...prev, availableDays };
+      const interestedPrograms = prev.interestedPrograms.includes(program)
+        ? prev.interestedPrograms.filter(p => p !== program)
+        : [...prev.interestedPrograms, program];
+      return { ...prev, interestedPrograms };
     });
   };
 
@@ -80,8 +85,8 @@ const VolunteerSignup = () => {
       return;
     }
 
-    if (formData.availableDays.length === 0) {
-      setStatus({ ...status, error: 'Please select at least one day you are available.' });
+    if (formData.interestedPrograms.length === 0) {
+      setStatus({ ...status, error: 'Please select at least one program you are interested in.' });
       return;
     }
     
@@ -93,7 +98,7 @@ const VolunteerSignup = () => {
       
       const successMessage = response.data.message || 'Thank you for signing up! Our Community Outreach team will be in touch soon.';
       setStatus({ loading: false, error: null, success: successMessage });
-      setFormData({ firstName: '', lastName: '', email: '', availableDays: [] });
+      setFormData({ firstName: '', lastName: '', email: '', interestedPrograms: [] });
       setEmailError('');
     } catch (err) {
       const errorMessage = err.response?.data?.message || 'An error occurred. Please try again.';
@@ -144,16 +149,16 @@ const VolunteerSignup = () => {
         />
         {emailError && <span className="error-text">{emailError}</span>}
 
-        <label style={{ marginTop: '0.5rem' }}>Which days work best for you to volunteer?*</label>
+        <label style={{ marginTop: '0.5rem' }}>Which programs are you interested in?*</label>
         <div className="days-checkboxes">
-          {DAYS_OF_WEEK.map(day => (
-            <label key={day} className="checkbox-label">
+          {VOLUNTEER_PROGRAMS.map(program => (
+            <label key={program} className="checkbox-label">
               <input
                 type="checkbox"
-                checked={formData.availableDays.includes(day)}
-                onChange={() => handleDayToggle(day)}
+                checked={formData.interestedPrograms.includes(program)}
+                onChange={() => handleProgramToggle(program)}
               />
-              <span>{day}</span>
+              <span>{program}</span>
             </label>
           ))}
         </div>

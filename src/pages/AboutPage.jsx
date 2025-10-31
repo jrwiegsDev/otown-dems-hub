@@ -20,12 +20,23 @@ const AboutPage = () => {
         <div className="grid-column">
           <div className="content-tile">
             <h2>Leadership</h2>
-            <ul>
+            
+            <h3 style={{ marginTop: '1rem', marginBottom: '0.5rem', color: 'var(--accent-blue)', fontSize: '1.1rem' }}>
+              Executive Board
+            </h3>
+            <ul style={{ marginTop: '0.5rem' }}>
               <li>President: <strong>Dennis Muyleart</strong></li>
               <li>Vice President: <strong>Roy Carney</strong></li>
-              <li>Community Outreach: <strong>Sarah L. Cunningham</strong></li>
-              <li>Community Outreach: <strong>Kendra Paulson</strong></li>
               <li>Youth Engagement Chair: <strong>Andrea Fohne</strong></li>
+            </ul>
+
+            <h3 style={{ marginTop: '1.5rem', marginBottom: '0.5rem', color: 'var(--accent-blue)', fontSize: '1.1rem' }}>
+              Community Outreach
+            </h3>
+            <ul style={{ marginTop: '0.5rem' }}>
+              <li>Co-Chair, Secretary: <strong>Sarah L. Cunningham</strong></li>
+              <li>Co-Chair, Secretary: <strong>Kendra Paulson</strong></li>
+              <li>Co-Chair, Technology: <strong>Joe Wiegert</strong></li>
             </ul>
           </div>
 
