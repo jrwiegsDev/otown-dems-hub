@@ -91,35 +91,37 @@ const Representatives = () => {
       {/* Representatives List */}
       <div className="representatives-list">
         {currentReps.map((rep, index) => (
-          <div key={index} className="rep-card">
-            <img 
-              src={rep.image} 
-              alt={rep.name}
-              className="rep-photo"
-            />
-            <div className="rep-info">
-              <h4 className="rep-name">{rep.name}</h4>
-              {rep.district && (
-                <p className="rep-district">District: {rep.district}</p>
-              )}
-              <p className={`rep-party ${rep.party.toLowerCase()}`}>
-                {rep.party}
-              </p>
-              <p className="rep-election">Next Election: {rep.nextElection}</p>
-            </div>
-            <div className="rep-contact">
-              <p className="rep-contact-label">Washington, D.C. Office</p>
-              <p className="rep-contact-info">{rep.office}</p>
-              <p className="rep-contact-info">{rep.location}</p>
-              <p className="rep-contact-info">{rep.phone}</p>
-              <a 
-                href={rep.contactUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="rep-contact-link"
-              >
-                Contact →
-              </a>
+          <div key={index}>
+            <div className="rep-card">
+              <img 
+                src={rep.image} 
+                alt={rep.name}
+                className="rep-photo"
+              />
+              <div className="rep-info">
+                <h4 className="rep-name">{rep.name}</h4>
+                {rep.district && (
+                  <p className="rep-district">District: {rep.district}</p>
+                )}
+                <p className={`rep-party ${rep.party.toLowerCase()}`}>
+                  {rep.party}
+                </p>
+                <p className="rep-election">Next Election: {rep.nextElection}</p>
+              </div>
+              <div className="rep-contact">
+                <p className="rep-contact-label">Washington, D.C. Office</p>
+                <p className="rep-contact-info">{rep.office}</p>
+                <p className="rep-contact-info">{rep.location}</p>
+                <p className="rep-contact-info">{rep.phone}</p>
+                <a 
+                  href={rep.contactUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="rep-contact-link"
+                >
+                  Contact →
+                </a>
+              </div>
             </div>
             
             {/* Julie Fortier Callout for Mike Bost */}

@@ -420,7 +420,6 @@
 .rep-card {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
   border: 1px solid var(--border-color);
@@ -530,9 +529,7 @@
 
 /* Inline Julie Fortier callout within rep card */
 .julie-callout-inline {
-  flex-basis: 100%;
-  width: 100%;
-  margin-top: 0.75rem;
+  margin-top: 0.5rem;
   padding: 0.75rem;
   background-color: rgba(var(--accent-rgb), 0.15);
   border-left: 3px solid var(--accent-blue);
@@ -844,6 +841,7 @@
 
   /* Reduce grid gap for tighter mobile layout */
   .main-content-grid {
+    grid-template-columns: 1fr !important; /* Force single column on mobile */
     gap: 1.5rem;
   }
 
