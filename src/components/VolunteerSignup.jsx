@@ -6,15 +6,11 @@ import axios from 'axios';
 const VOLUNTEER_PROGRAMS = [
   'Adopt A Highway',
   'Christmas Toy Drive',
-  'Thanksgiving Meal Drive',
-  'Food Pantry Support',
+  "O'Fallon Food Pantry",
   'Community Garden',
-  'Literacy Tutoring',
   'Senior Outreach',
-  'Voter Registration',
   'School Supply Drive',
-  'Winter Coat Drive',
-  'Book Drive',
+  'Belleville Area Humane Society',
   'Community Clean-Up Events'
 ];
 

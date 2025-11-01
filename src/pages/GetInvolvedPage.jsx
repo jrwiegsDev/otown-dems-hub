@@ -9,7 +9,7 @@ import VolunteerSignup from '../components/VolunteerSignup';
 
 const GetInvolvedPage = () => {
   return (
-    <div className="page-container">
+    <div className="page-container get-involved-page">
       <h1>Get Involved</h1>
       
       <div className="main-content-grid">
@@ -17,14 +17,6 @@ const GetInvolvedPage = () => {
         <div className="grid-column">
           <div className="content-tile">
             <PledgeToVote />
-          </div>
-
-          <div className="content-tile">
-            <h2>🤝 Help Your Neighbors</h2>
-            <p>
-              Able to help? Consider donating to these local organizations that support our community.
-            </p>
-            <p><em>Organization directory coming soon...</em></p>
           </div>
 
           <div className="content-tile">

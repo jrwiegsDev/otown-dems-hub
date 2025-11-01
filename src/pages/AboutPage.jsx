@@ -7,13 +7,17 @@ import AboutThisSite from '../components/AboutThisSite';
 
 const AboutPage = () => {
   return (
-    <div className="page-container">
+    <div className="page-container about-page">
       <h1>About O'Fallon Area Democratic Club</h1>
       
       <div className="main-content-grid">
         <div className="grid-column">
           <div className="content-tile">
             <MissionStatement />
+          </div>
+
+          <div className="content-tile">
+            <AboutThisSite />
           </div>
         </div>
 
@@ -38,10 +42,6 @@ const AboutPage = () => {
               <li>Co-Chair, Secretary: <strong>Kendra Paulson</strong></li>
               <li>Co-Chair, Technology: <strong>Joe Wiegert</strong></li>
             </ul>
-          </div>
-
-          <div className="content-tile">
-            <AboutThisSite />
           </div>
         </div>
 

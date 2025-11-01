@@ -10,7 +10,7 @@ import WeeklyPoll from '../components/WeeklyPoll';
 
 const HomePage = () => {
   return (
-    <>
+    <div className="home-page">
       <h1 className="main-heading">
         <img src="/OTown-Dems_logo.png" alt="O'Fallon Area Dems Logo" className="header-logo left" />
           O'Fallon Area Democratic Club
@@ -65,7 +65,7 @@ const HomePage = () => {
         </div>
         
       </div>
-    </>
+    </div>
   );
 };
 

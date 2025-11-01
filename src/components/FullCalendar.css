@@ -1,12 +1,14 @@
 /* src/components/FullCalendar.css */
 
+/* Make calendar fill its container width */
+.fc {
+    width: 100% !important;
+    color: var(--text-primary);
+}
+
 /* --- General & Toolbar --- */
 .fc-toolbar {
     background-color: transparent !important;
-}
-
-.fc {
-    color: var(--text-primary);
 }
 
 .fc .fc-toolbar-title {

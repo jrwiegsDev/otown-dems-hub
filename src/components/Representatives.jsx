@@ -21,7 +21,7 @@ const Representatives = () => {
       name: 'Dick Durbin',
       party: 'Democratic',
       image: '/Durbin.png',
-      nextElection: 2026,
+      nextElection: '2026 (Retiring)',
       district: null,
       phone: '(202) 224-2152',
       office: '711 Hart Senate Office Building',
@@ -121,18 +121,18 @@ const Representatives = () => {
                 Contact →
               </a>
             </div>
+            
+            {/* Julie Fortier Callout for Mike Bost */}
+            {rep.name === 'Mike Bost' && (
+              <div className="julie-callout-inline">
+                <p>
+                  <strong>Julie Fortier</strong> is running to replace Mike Bost in the 12th District!
+                </p>
+              </div>
+            )}
           </div>
         ))}
       </div>
-
-      {/* Julie Fortier Callout for House view */}
-      {view === 'house' && (
-        <div className="julie-callout">
-          <p>
-            <strong>Julie Fortier</strong> is running to replace Mike Bost in the 12th District!
-          </p>
-        </div>
-      )}
     </div>
   );
 };

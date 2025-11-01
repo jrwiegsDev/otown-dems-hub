@@ -12,7 +12,7 @@ const DemocracyDashboard = () => {
   const [activeFilter, setActiveFilter] = useState('congress');
 
   return (
-    <div className="page-container">
+    <div className="page-container democracy-dashboard-page">
       <h1>Democracy Dashboard</h1>
 
 

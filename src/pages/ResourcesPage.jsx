@@ -2,29 +2,18 @@
 
 import NeedSupport from '../components/NeedSupport';
 import Healthcare from '../components/Healthcare';
+import VoterInformation from '../components/VoterInformation';
 
 const ResourcesPage = () => {
   return (
-    <div className="page-container">
+    <div className="page-container resources-page">
       <h1>Resources</h1>
       
       <div className="main-content-grid">
         {/* Column 1 */}
         <div className="grid-column">
           <div className="content-tile">
-            <h2>🎓 Citizenship Education</h2>
-            <p>
-              Learn about U.S. citizenship, civics, and the democratic process.
-            </p>
-            <p><em>Educational video content coming soon...</em></p>
-          </div>
-
-          <div className="content-tile">
-            <h2>🗳️ Voter Information</h2>
-            <p>
-              Registration info, polling locations, and key election dates.
-            </p>
-            <p><em>Content coming soon...</em></p>
+            <VoterInformation />
           </div>
         </div>
 
@@ -47,6 +36,14 @@ const ResourcesPage = () => {
         <div className="grid-column">
           <div className="content-tile">
             <Healthcare />
+          </div>
+
+          <div className="content-tile">
+            <h2>🎓 Citizenship Education</h2>
+            <p>
+              Learn about U.S. citizenship, civics, and the democratic process.
+            </p>
+            <p><em>Educational video content coming soon...</em></p>
           </div>
         </div>
       </div>

@@ -81,12 +81,31 @@
    ========================================================================== */
 .main-content-grid {
   display: grid;
-  grid-template-columns: 0.7fr 1.3fr 1.0fr; /* Column 1: ~23%, Column 2: calendar width, Column 3: wider for poll */
+  grid-template-columns: 3fr 4fr 3fr; /* Default: Column 1: 30%, Column 2: 40%, Column 3: 30% */
   gap: 2rem; /* Space between the three columns */
   align-items: start; /* THIS IS THE KEY: Prevents columns from stretching to equal height, fixing the whitespace issue. */
   max-width: 1400px; /* Prevent tiles from being too wide */
   margin: 0 auto; /* Center the grid */
 }
+
+/* Page-specific column widths */
+.home-page .main-content-grid {
+  grid-template-columns: 2.5fr 4.5fr 3fr; /* HomePage: 25%, 45%, 30% */
+}
+
+.about-page .main-content-grid {
+  grid-template-columns: 1fr 1fr 1fr; /* AboutPage: Equal thirds */
+}
+
+.get-involved-page .main-content-grid {
+  grid-template-columns: 3fr 3fr 4fr; /* GetInvolvedPage: 30%, 30%, 40% */
+}
+
+.resources-page .main-content-grid {
+  grid-template-columns: 3fr 4fr 3fr; /* ResourcesPage: 30%, 40%, 30% */
+}
+
+/* Democracy Dashboard uses its own layout, not affected by main-content-grid */
 
 .grid-column {
   display: flex;
@@ -400,6 +419,8 @@
 
 .rep-card {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 1rem;
   padding: 1rem;
   border: 1px solid var(--border-color);
@@ -505,6 +526,27 @@
 
 .julie-callout p {
   margin: 0;
+}
+
+/* Inline Julie Fortier callout within rep card */
+.julie-callout-inline {
+  flex-basis: 100%;
+  width: 100%;
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  background-color: rgba(var(--accent-rgb), 0.15);
+  border-left: 3px solid var(--accent-blue);
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.julie-callout-inline p {
+  margin: 0;
+  font-style: italic;
+}
+
+.julie-callout-inline strong {
+  color: var(--accent-blue);
 }
 
 /* --- No Kings Tile --- */
