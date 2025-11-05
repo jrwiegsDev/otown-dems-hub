@@ -4,15 +4,17 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
+import interactionPlugin from '@fullcalendar/interaction';
 import './FullCalendar.css';
-import Tippy from '@tippyjs/react';
-import 'tippy.js/dist/tippy.css';
-import { useMediaQuery } from '../hooks/useMediaQuery'; // <-- 1. Import the hook
+import { useMediaQuery } from '../hooks/useMediaQuery';
+import EventDetailModal from './EventDetailModal';
 
 const Events = () => {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [selectedEvent, setSelectedEvent] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // 2. Use the hook to check for mobile screen size
   const isMobile = useMediaQuery('(max-width: 1024px)');
@@ -34,32 +36,35 @@ const Events = () => {
   }, []);
 
   const formattedEvents = events.map(event => ({
+    id: event._id,
     title: event.eventName,
     date: event.eventDate.slice(0, 10),
     extendedProps: {
       description: event.eventDescription,
-      time: event.eventTime
+      time: event.eventTime,
+      startTime: event.startTime,
+      endTime: event.endTime,
+      isAllDay: event.isAllDay,
+      location: event.eventLocation,
+      coordinates: event.eventCoordinates,
+      link: event.eventLink,
+      linkText: event.eventLinkText
     }
   }));
 
-  const renderEventContent = (eventInfo) => {
-    const { description, time } = eventInfo.event.extendedProps;
-    const tooltipContent = `
-      <div>
-        <p><strong>Time:</strong> ${time || 'N/A'}</p>
-        <p><strong>Info:</strong> ${description || 'No details'}</p>
-      </div>
-    `;
+  const handleEventClick = (clickInfo) => {
+    const eventData = {
+      title: clickInfo.event.title,
+      date: clickInfo.event.startStr,
+      ...clickInfo.event.extendedProps
+    };
+    setSelectedEvent(eventData);
+    setIsModalOpen(true);
+  };
 
-    return (
-      <Tippy content={<div dangerouslySetInnerHTML={{ __html: tooltipContent }} />}>
-        <div className="fc-event-main-frame">
-          <div className="fc-event-title-container">
-            <div className="fc-event-title fc-sticky">{eventInfo.event.title}</div>
-          </div>
-        </div>
-      </Tippy>
-    );
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedEvent(null);
   };
 
   if (loading) return <p>Loading events...</p>;
@@ -69,7 +74,7 @@ const Events = () => {
   return (
     <div>
       <FullCalendar
-        plugins={[dayGridPlugin]}
+        plugins={[dayGridPlugin, interactionPlugin]}
         initialView="dayGridMonth"
         events={formattedEvents}
         headerToolbar={{
@@ -77,9 +82,15 @@ const Events = () => {
           center: 'title',
           right: 'dayGridMonth,dayGridWeek'
         }}
-        eventContent={renderEventContent}
+        eventClick={handleEventClick}
         height={isMobile ? 'auto' : '100%'}
-        aspectRatio={1.8} /* <-- ADD THIS PROP */
+        aspectRatio={1.8}
+      />
+      
+      <EventDetailModal 
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        event={selectedEvent}
       />
     </div>
   );
