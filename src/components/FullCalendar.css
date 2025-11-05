@@ -61,6 +61,29 @@
     padding: 2px;
 }
 
+/* --- "X Events" More Link Button Styling --- */
+.fc-daygrid-more-link {
+    background-color: var(--accent-blue) !important;
+    color: white !important;
+    border: 2px solid var(--accent-blue) !important;
+    border-radius: 6px !important;
+    padding: 4px 12px !important;
+    font-weight: 600 !important;
+    font-size: 0.875rem !important;
+    text-align: center !important;
+    cursor: pointer !important;
+    transition: all 0.2s !important;
+    display: inline-block !important;
+    margin: 2px !important;
+    text-decoration: none !important;
+}
+
+.fc-daygrid-more-link:hover {
+    background-color: #1e40af !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.4) !important;
+}
+
 /* --- Event Details "Tooltip" --- */
 .event-details {
     background-color: #0d1117;
