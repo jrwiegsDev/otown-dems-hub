@@ -788,6 +788,19 @@
     grid-template-columns: 1fr;
   }
 
+  /* Reorder columns on mobile: Weekly Poll (column 3) appears first */
+  .grid-column:nth-child(1) {
+    order: 2; /* Informational column (Banner, Announcements, Donation) - second */
+  }
+
+  .grid-column:nth-child(2) {
+    order: 3; /* Calendar column - third */
+  }
+
+  .grid-column:nth-child(3) {
+    order: 1; /* Action column (Weekly Poll, Mailing List) - FIRST on mobile! */
+  }
+
   /* Reset calendar min-height on mobile to avoid excessive space */
   .calendar-tile {
     min-height: auto;
