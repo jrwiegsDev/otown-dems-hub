@@ -154,19 +154,17 @@
 }
 
 /* Dark mode adjustments */
-@media (prefers-color-scheme: dark) {
-  .accountability-box {
-    background: rgba(220, 38, 38, 0.1);
-    border-color: rgba(220, 38, 38, 0.3);
-  }
-  
-  .accountability-box p {
-    color: #fca5a5;
-  }
-  
-  .action-text strong {
-    color: #fecaca;
-  }
+body[data-theme='dark'] .accountability-box {
+  background: rgba(220, 38, 38, 0.1);
+  border-color: rgba(220, 38, 38, 0.3);
+}
+
+body[data-theme='dark'] .accountability-box p {
+  color: #fca5a5;
+}
+
+body[data-theme='dark'] .action-text strong {
+  color: #fecaca;
 }
 
 /* Responsive */

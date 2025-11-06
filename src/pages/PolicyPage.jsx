@@ -9,7 +9,7 @@ const PolicyPage = () => {
       <Link to="/" className="back-link">&larr; Back to Home</Link>
 
       <h1>PRIVACY POLICY & TERMS OF SERVICE</h1>
-      <p><strong>Last Updated: October 29, 2025</strong></p>
+      <p><strong>Last Updated: November 6, 2025</strong></p>
       <p>The O'Fallon Area Democratic Club ("we," or "us") cares about your privacy rights and providing you with the information you need to protect them. Accordingly, we've created this policy to explain our privacy practices. This policy applies to ofallonildems.org only.</p>
       <p>We may revise and update this policy if our practices change or if we add or change features on the site. You should refer back to this page often for the latest information.</p>
 
@@ -21,7 +21,7 @@ const PolicyPage = () => {
       <hr />
 
       <h2>INFORMATION COLLECTED ABOUT YOU</h2>
-      <p><strong>Mailing List:</strong> We collect personal information when you sign up for our mailing list on our site. Personal information we collect includes your email address. Providing your first and last name is optional.</p>
+      <p><strong>Mailing List:</strong> We collect personal information when you sign up for our mailing list on our site. Personal information we collect includes your first name, last name, and email address. All fields are required to complete your subscription.</p>
       <p><strong>Volunteer Sign-Up:</strong> When you sign up to volunteer, we collect your first name, last name, email address, and your program interests (which community programs you're interested in learning more about or participating in). This information is used solely to match volunteers with appropriate community service opportunities and will be shared only with our Community Outreach team members. We retain volunteer information until you request removal by contacting us at <strong>ofallondems@gmail.com</strong>.</p>
       <p><strong>Weekly Poll:</strong> Our optional Weekly Community Poll feature collects your email address solely for spam prevention purposes. Your email is used only to ensure you can vote once per week and is automatically deleted after 7 days. We do not use this email for any other purpose, and it is never added to our mailing list or shared with any third parties. The poll results themselves are completely anonymous and aggregated.</p>
       <p><strong>Donations:</strong> When making a contribution via a third-party service like ActBlue, you will be subject to their terms and privacy policy. We may receive personal information from that processor as required by campaign finance law, such as your name, mailing address, occupation, and name of employer. We do not collect or store your credit card or bank account information on our Sites.</p>

@@ -221,20 +221,18 @@
 }
 
 /* Dark mode adjustments */
-@media (prefers-color-scheme: dark) {
-  .reminder-box {
-    background: rgba(220, 38, 38, 0.1);
-    border-color: rgba(220, 38, 38, 0.3);
-  }
-  
-  .reminder-box p {
-    color: #fca5a5;
-  }
-  
-  .reminder-box strong,
-  .reminder-emphasis {
-    color: #fecaca !important;
-  }
+body[data-theme='dark'] .reminder-box {
+  background: rgba(220, 38, 38, 0.1);
+  border-color: rgba(220, 38, 38, 0.3);
+}
+
+body[data-theme='dark'] .reminder-box p {
+  color: #fca5a5;
+}
+
+body[data-theme='dark'] .reminder-box strong,
+body[data-theme='dark'] .reminder-emphasis {
+  color: #fecaca !important;
 }
 
 /* Responsive */

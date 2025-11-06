@@ -40,6 +40,16 @@ const MailingListSignup = () => {
     e.preventDefault();
     
     // Frontend validation
+    if (!formData.firstName || !formData.firstName.trim()) {
+      setStatus({ ...status, error: 'First name is required.' });
+      return;
+    }
+    
+    if (!formData.lastName || !formData.lastName.trim()) {
+      setStatus({ ...status, error: 'Last name is required.' });
+      return;
+    }
+    
     if (!formData.email) {
       setStatus({ ...status, error: 'Email address is required.' });
       return;
@@ -75,22 +85,24 @@ const MailingListSignup = () => {
       <p>Stay up to date with our events and news!</p>
       <p>Already subscribed? No worries! Submitting this form will update your information with any new details you provide.</p>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="firstName">First Name</label>
+        <label htmlFor="firstName">First Name*</label>
         <input
           type="text"
           id="firstName"
           name="firstName"
           value={formData.firstName}
           onChange={handleChange}
+          required
         />
 
-        <label htmlFor="lastName">Last Name</label>
+        <label htmlFor="lastName">Last Name*</label>
         <input
           type="text"
           id="lastName"
           name="lastName"
           value={formData.lastName}
           onChange={handleChange}
+          required
         />
 
         <label htmlFor="email">Email*</label>

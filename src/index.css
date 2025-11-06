@@ -2,30 +2,30 @@
 
 /* --- Light Mode Variables (Default) --- */
 :root {
-  --background: #f0f2f5;
-  --surface: #ffffff;
+  --background: #e8eaed;
+  --surface: #f5f6f7;
   --text-primary: #1c1e21;
-  --text-secondary: #65676b;
-  --border-color: #ced0d4;
+  --text-secondary: #5f6368;
+  --border-color: #dadce0;
   --accent-gold: #003366; /* CHANGED: A dark navy blue for better contrast */
   --accent-blue: #1877f2;
   --link-color: #1877f2;
-  --button-hover-bg: #e4e6eb;
-  --tile-bg: #ffffff;
+  --button-hover-bg: #dde0e3;
+  --tile-bg: #f5f6f7;
 }
 
 /* --- Dark Mode Variables --- */
 body[data-theme='dark'] {
-  --background: #0d1117;
-  --surface: #161b22;
-  --text-primary: #c9d1d9;
-  --text-secondary: #8b949e;
-  --border-color: #30363d;
+  --background: #2b3139;
+  --surface: #353a42;
+  --text-primary: #e8eaed;
+  --text-secondary: #9aa0a6;
+  --border-color: #4a5058;
   --accent-gold: var(--text-primary); /* CHANGED: Make it the same as the primary text (white) */
   --accent-blue: #58a6ff;
   --link-color: #58a6ff;
-  --button-hover-bg: #21262d;
-  --tile-bg: #161b22;
+  --button-hover-bg: #404650;
+  --tile-bg: #353a42;
 }
 
 /* --- Global Styles --- */

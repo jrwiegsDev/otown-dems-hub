@@ -126,9 +126,42 @@ const Representatives = () => {
             
             {/* Julie Fortier Callout for Mike Bost */}
             {rep.name === 'Mike Bost' && (
+              <>
+                <div className="julie-callout-inline">
+                  <p>
+                    <strong>Julie Fortier</strong> is running to replace <strong className="mike-bost-red">Mike Bost</strong> in the 12th District!
+                  </p>
+                </div>
+                <div className="julie-callout-inline">
+                  <p>
+                    Interested in volunteering for <strong>Julie's</strong> campaign?
+                  </p>
+                  <a 
+                    href="https://volunteer4julie.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="julie-volunteer-button"
+                  >
+                    Sign Up Here!
+                  </a>
+                </div>
+              </>
+            )}
+            
+            {/* Juliana Stratton Callout for Dick Durbin */}
+            {rep.name === 'Dick Durbin' && (
               <div className="julie-callout-inline">
                 <p>
-                  <strong>Julie Fortier</strong> is running to replace Mike Bost in the 12th District!
+                  <strong>
+                    <a 
+                      href="https://www.julianastratton.com/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="candidate-link"
+                    >
+                      Juliana Stratton
+                    </a>
+                  </strong> is running to fill this seat!
                 </p>
               </div>
             )}

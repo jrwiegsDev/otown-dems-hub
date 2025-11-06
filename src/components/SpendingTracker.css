@@ -196,30 +196,28 @@
 }
 
 /* Dark mode adjustments */
-@media (prefers-color-scheme: dark) {
-  .wasteful-total {
-    background: rgba(220, 38, 38, 0.15);
-    border-color: rgba(220, 38, 38, 0.5);
-    color: #fca5a5;
-  }
-  
-  .total-amount {
-    color: #fecaca;
-  }
-  
-  .priorities-box {
-    background: rgba(220, 38, 38, 0.1);
-    border-color: rgba(220, 38, 38, 0.3);
-  }
-  
-  .priorities-box p {
-    color: #fca5a5;
-  }
-  
-  .priorities-box strong,
-  .priorities-emphasis {
-    color: #fecaca !important;
-  }
+body[data-theme='dark'] .wasteful-total {
+  background: rgba(220, 38, 38, 0.15);
+  border-color: rgba(220, 38, 38, 0.5);
+  color: #fca5a5;
+}
+
+body[data-theme='dark'] .total-amount {
+  color: #fecaca;
+}
+
+body[data-theme='dark'] .priorities-box {
+  background: rgba(220, 38, 38, 0.1);
+  border-color: rgba(220, 38, 38, 0.3);
+}
+
+body[data-theme='dark'] .priorities-box p {
+  color: #fca5a5;
+}
+
+body[data-theme='dark'] .priorities-box strong,
+body[data-theme='dark'] .priorities-emphasis {
+  color: #fecaca !important;
 }
 
 /* Responsive */

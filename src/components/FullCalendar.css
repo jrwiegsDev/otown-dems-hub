@@ -86,11 +86,11 @@
 
 /* --- Event Details "Tooltip" --- */
 .event-details {
-    background-color: #0d1117;
+    background-color: var(--surface);
     border-radius: 6px;
     padding: 0.5rem 1rem;
     margin-top: 1rem;
-    border: 1px solid #30363d;
+    border: 1px solid var(--border-color);
 }
 
 .event-details h4 {
