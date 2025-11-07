@@ -147,24 +147,6 @@ const Representatives = () => {
                 </div>
               </>
             )}
-            
-            {/* Juliana Stratton Callout for Dick Durbin */}
-            {rep.name === 'Dick Durbin' && (
-              <div className="julie-callout-inline">
-                <p>
-                  <strong>
-                    <a 
-                      href="https://www.julianastratton.com/" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="candidate-link"
-                    >
-                      Juliana Stratton
-                    </a>
-                  </strong> is running to fill this seat!
-                </p>
-              </div>
-            )}
           </div>
         ))}
       </div>
