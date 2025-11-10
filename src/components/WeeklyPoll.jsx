@@ -12,7 +12,7 @@ const ISSUES = [
   'Government Corruption',
   'Cost of Living / Inflation',
   'The Economy',
-  'State of U.S. Democracy',
+  'State of US Democracy',
   'Disruption of Federal Government Services',
   'Government Shutdown',
   'Treatment of Immigrants by ICE',
