@@ -183,25 +183,25 @@ const WeeklyPoll = () => {
   return (
     <div className="weekly-poll-container">
       <h2>🗳️ Weekly Community Poll</h2>
-      <p className="poll-question">What are the top 3 issues affecting you this week?</p>
+      <p className="poll-question">Help us track what matters most to our community - Remember: your voice makes our data stronger!</p>
 
       {/* Email Entry Section */}
       {!votingEnabled && !hasVoted && (
         <form onSubmit={handleEmailSubmit} className="email-form">
           <p className="poll-instruction">
-            Enter your email to enable voting. We don't store your email or sign you up for anything.
+            Be sure to vote weekly to build a real-time picture of what's affecting local residents. Your email is simply your "key" to "unlock" the voting feature; we never store it or sign you up for anything! The more neighbors who participate, the more powerful our collective voice becomes for elected officials to see and act on!
           </p>
           <div className="email-input-group">
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email to vote"
+              placeholder="Enter email to enable voting"
               className="email-input"
               disabled={loading}
             />
             <button type="submit" className="email-submit-btn" disabled={loading}>
-              {loading ? 'Checking...' : 'Enable Voting'}
+              {loading ? 'Checking...' : 'Get Started'}
             </button>
           </div>
         </form>
@@ -215,7 +215,7 @@ const WeeklyPoll = () => {
       {votingEnabled && !hasVoted && (
         <div className="voting-section">
           <p className="voting-instruction">
-            Select up to 3 issues, then click "Submit Votes" to lock in your choices for the week.
+            Pick up to 3 issues affecting you this week. Come back next week to track how things change!
           </p>
           <div className="issues-list">
             {ISSUES.map((issue) => (
