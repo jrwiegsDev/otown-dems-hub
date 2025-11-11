@@ -133,6 +133,16 @@ const Representatives = () => {
                   </p>
                 </div>
                 <div className="julie-callout-inline">
+                  <a 
+                    href="https://www.juliefortier.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="julie-volunteer-button"
+                  >
+                    Visit Julie's Website!
+                  </a>
+                </div>
+                <div className="julie-callout-inline">
                   <p>
                     Interested in volunteering for <strong>Julie's</strong> campaign?
                   </p>
