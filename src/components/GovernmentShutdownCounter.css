@@ -16,12 +16,21 @@
   color: #dc2626;
 }
 
+.shutdown-counter.ended h2 {
+  color: var(--accent-blue);
+}
+
 .shutdown-subtitle {
   text-align: center;
   color: var(--text-secondary);
   margin: 0 0 1rem 0;
   font-size: 0.95rem;
   font-weight: 600;
+}
+
+.shutdown-subtitle.ended {
+  color: #059669;
+  font-size: 0.9rem;
 }
 
 .no-shutdown {
@@ -54,6 +63,11 @@
   border: 2px solid #dc2626;
 }
 
+.counter-display.ended {
+  border-color: var(--accent-blue);
+  background: linear-gradient(135deg, var(--surface) 0%, rgba(59, 130, 246, 0.05) 100%);
+}
+
 .counter-item {
   display: flex;
   flex-direction: column;
@@ -67,6 +81,10 @@
   color: #dc2626;
   line-height: 1;
   font-variant-numeric: tabular-nums;
+}
+
+.counter-display.ended .counter-value {
+  color: var(--accent-blue);
 }
 
 .counter-label {
@@ -84,11 +102,25 @@
   line-height: 1;
 }
 
+.counter-display.ended .counter-separator {
+  color: var(--accent-blue);
+}
+
 .shutdown-impact {
   background: var(--background);
   padding: 1rem;
   border-radius: 8px;
   border-left: 4px solid #dc2626;
+}
+
+.shutdown-impact h3 {
+  margin: 1.5rem 0 0.75rem 0;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.shutdown-impact h3:first-child {
+  margin-top: 0;
 }
 
 .shutdown-impact p {
@@ -112,6 +144,263 @@
 
 .shutdown-impact li:last-child {
   margin-bottom: 0;
+}
+
+/* Cost highlight section */
+.cost-highlight {
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  margin: 1rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.total-cost {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: white;
+  margin: 0;
+  line-height: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cost-label {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  margin: 0.5rem 0 0 0;
+  font-weight: 500;
+}
+
+/* Congress pay callout */
+.congress-pay-callout {
+  background: #fef2f2;
+  border: 2px solid #dc2626;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.callout-text {
+  margin: 0 0 0.75rem 0 !important;
+  color: #991b1b !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+}
+
+.congress-daily-pay {
+  font-size: 1.1rem;
+  color: #7f1d1d;
+  margin: 0.5rem 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+.congress-daily-pay strong {
+  color: #dc2626;
+  font-size: 1.3rem;
+}
+
+.congress-total-pay {
+  font-size: 0.95rem;
+  color: #7f1d1d;
+  margin: 0.5rem 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+.congress-total-pay strong {
+  color: #dc2626;
+}
+
+.callout-reminder {
+  margin: 0.75rem 0 0 0 !important;
+  padding-top: 0.75rem;
+  border-top: 1px solid #fecaca;
+  color: #991b1b !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  line-height: 1.6 !important;
+  font-style: italic;
+}
+
+/* Salary breakdown section */
+.salary-breakdown {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: rgba(127, 29, 29, 0.05);
+  border-radius: 6px;
+  border: 1px solid #fecaca;
+}
+
+.salary-breakdown h4 {
+  margin: 0 0 0.75rem 0;
+  color: #7f1d1d;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.salary-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.salary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.salary-role {
+  color: #7f1d1d;
+  font-weight: 600;
+}
+
+.salary-amount {
+  color: #991b1b;
+  font-weight: 700;
+  text-align: right;
+}
+
+body[data-theme='dark'] .salary-breakdown {
+  background: rgba(220, 38, 38, 0.05);
+  border-color: rgba(220, 38, 38, 0.3);
+}
+
+body[data-theme='dark'] .salary-breakdown h4 {
+  color: #fca5a5;
+}
+
+body[data-theme='dark'] .salary-item {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+body[data-theme='dark'] .salary-role {
+  color: #fca5a5;
+}
+
+body[data-theme='dark'] .salary-amount {
+  color: #fecaca;
+}
+
+/* Impact stats grid */
+.impact-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.stat-item {
+  background: var(--surface);
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #dc2626;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.impact-details {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+.impact-details li {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+/* Dark mode adjustments for new elements */
+body[data-theme='dark'] .cost-highlight {
+  background: linear-gradient(135deg, #991b1b 0%, #7f1d1d 100%);
+}
+
+body[data-theme='dark'] .congress-pay-callout {
+  background: rgba(220, 38, 38, 0.1);
+  border-color: rgba(220, 38, 38, 0.4);
+}
+
+body[data-theme='dark'] .callout-text {
+  color: #fca5a5 !important;
+}
+
+body[data-theme='dark'] .congress-daily-pay,
+body[data-theme='dark'] .congress-total-pay {
+  color: #fca5a5;
+}
+
+body[data-theme='dark'] .congress-daily-pay strong,
+body[data-theme='dark'] .congress-total-pay strong {
+  color: #fecaca;
+}
+
+body[data-theme='dark'] .callout-reminder {
+  border-top-color: rgba(220, 38, 38, 0.3);
+  color: #fca5a5 !important;
+}
+
+body[data-theme='dark'] .stat-item {
+  background: rgba(59, 130, 246, 0.05);
+}
+
+/* Shutdown resolution section */
+.shutdown-resolution {
+  background: #ecfdf5;
+  border: 2px solid #10b981;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.shutdown-resolution h3 {
+  margin: 0 0 0.75rem 0;
+  color: #065f46;
+  font-size: 1rem;
+}
+
+.shutdown-resolution p {
+  margin: 0 0 0.75rem 0;
+  color: #064e3b;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.shutdown-resolution p:last-child {
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+body[data-theme='dark'] .shutdown-resolution {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+body[data-theme='dark'] .shutdown-resolution h3 {
+  color: #6ee7b7;
+}
+
+body[data-theme='dark'] .shutdown-resolution p {
+  color: #a7f3d0;
 }
 
 .shutdown-info {
@@ -249,5 +538,23 @@ body[data-theme='dark'] .accountability-note strong {
 
   .counter-separator {
     font-size: 1.5rem;
+  }
+
+  .impact-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .total-cost {
+    font-size: 2rem;
+  }
+
+  .salary-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .salary-amount {
+    text-align: left;
   }
 }

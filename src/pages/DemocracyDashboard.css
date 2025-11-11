@@ -64,6 +64,17 @@
   overflow-x: hidden;
 }
 
+/* Single full-width section for Congress */
+.congress-section {
+  margin-top: 2rem;
+  overflow-x: hidden;
+}
+
+.content-tile.full-width {
+  width: 100%;
+  max-width: 100%;
+}
+
 @media (max-width: 1024px) {
   .congress-grid {
     grid-template-columns: 1fr;

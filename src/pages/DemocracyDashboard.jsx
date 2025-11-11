@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import RecognizeFascism from '../components/RecognizeFascism';
 import GovernmentShutdownCounter from '../components/GovernmentShutdownCounter';
-import CongressWorkTracker from '../components/CongressWorkTracker';
 import SpendingTracker from '../components/SpendingTracker';
 import Project2025Tracker from '../components/Project2025Tracker';
 import './DemocracyDashboard.css';
@@ -32,19 +31,9 @@ const DemocracyDashboard = () => {
       </div>
       
       {activeFilter === 'congress' && (
-        <div className="congress-grid">
-          {/* Column 1 */}
-          <div className="grid-column">
-            <div className="content-tile">
-              <GovernmentShutdownCounter />
-            </div>
-          </div>
-
-          {/* Column 2 */}
-          <div className="grid-column">
-            <div className="content-tile">
-              <CongressWorkTracker />
-            </div>
+        <div className="congress-section">
+          <div className="content-tile full-width">
+            <GovernmentShutdownCounter />
           </div>
         </div>
       )}
