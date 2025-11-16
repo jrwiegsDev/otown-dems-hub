@@ -1,0 +1,79 @@
+/* src/components/SantaSleigh.css */
+
+.santa-sleigh {
+  position: fixed;
+  z-index: 9998;
+  pointer-events: none;
+}
+
+/* Left-to-right flight (Santa starts on left, faces right, moves right) */
+.santa-sleigh.ltr {
+  left: -200px;
+  animation: flyLTR 6s linear forwards;
+}
+
+/* Right-to-left flight (Santa starts on right, faces left, moves left) */
+.santa-sleigh.rtl {
+  right: -200px;
+  animation: flyRTL 6s linear forwards;
+}
+
+.santa-image {
+  width: 150px;
+  height: auto;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Mirror image for left-to-right direction so Santa faces right */
+.santa-sleigh.ltr .santa-image {
+  transform: scaleX(-1);
+}
+
+/* Left-to-right animation with slight up/down movement */
+@keyframes flyLTR {
+  0% {
+    left: -200px;
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  75% {
+    transform: translateY(-15px);
+  }
+  100% {
+    left: 110vw;
+    transform: translateY(0);
+  }
+}
+
+/* Right-to-left animation with slight up/down movement */
+@keyframes flyRTL {
+  0% {
+    right: -200px;
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-30px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  75% {
+    transform: translateY(-15px);
+  }
+  100% {
+    right: 110vw;
+    transform: translateY(0);
+  }
+}
+
+/* Make santa smaller on mobile */
+@media (max-width: 768px) {
+  .santa-image {
+    width: 100px;
+  }
+}

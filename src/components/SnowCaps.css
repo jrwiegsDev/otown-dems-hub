@@ -1,0 +1,51 @@
+/* src/components/SnowCaps.css */
+
+.snow-cap-overlay {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+  height: auto;
+}
+
+/* Middle position (snowcap-1) */
+.snow-cap-overlay.middle {
+  transform: translateX(-50%);
+}
+
+.snow-cap-overlay.middle.top {
+  top: 0;
+  transform: translate(-50%, -50%);
+}
+
+.snow-cap-overlay.middle.bottom {
+  bottom: 0;
+  transform: translate(-50%, 50%);
+}
+
+/* Top left corner (snowcap-3) */
+.snow-cap-overlay.top-left {
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+/* Top right corner (snowcap-5) */
+.snow-cap-overlay.top-right {
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+/* Bottom left corner (snowcap-2) */
+.snow-cap-overlay.bottom-left {
+  bottom: 0;
+  left: 0;
+  transform: translate(-50%, 50%);
+}
+
+/* Bottom right corner (snowcap-4) */
+.snow-cap-overlay.bottom-right {
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 50%);
+}

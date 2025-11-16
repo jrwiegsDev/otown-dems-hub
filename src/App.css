@@ -851,6 +851,38 @@
   }
 }
 
+/* Tablet breakpoint (iPad and similar) */
+@media (max-width: 1024px) {
+  /* Switch to single column layout for tablets */
+  .main-content-grid {
+    grid-template-columns: 1fr !important; /* Force single column on tablets */
+    gap: 1.5rem;
+  }
+
+  .grid-column {
+    gap: 1.5rem;
+  }
+
+  /* Reduce calendar min-height on tablets */
+  .calendar-tile {
+    min-height: 400px;
+  }
+
+  /* Adjust tile padding */
+  .content-tile {
+    padding: 1.25rem;
+  }
+
+  /* Responsive header */
+  .main-heading {
+    font-size: 1.75rem;
+  }
+
+  .header-logo {
+    height: 50px;
+  }
+}
+
 /* Mobile breakpoint */
 @media (max-width: 768px) {
   /* Reduce main container padding to match page-container */

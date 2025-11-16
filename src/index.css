@@ -2,16 +2,16 @@
 
 /* --- Light Mode Variables (Default) --- */
 :root {
-  --background: #e8eaed;
-  --surface: #f5f6f7;
-  --text-primary: #1c1e21;
-  --text-secondary: #5f6368;
-  --border-color: #dadce0;
-  --accent-gold: #003366; /* CHANGED: A dark navy blue for better contrast */
+  --background: #b8d4e8; /* Icy blue background */
+  --surface: #d4e6f5; /* Lighter icy blue for surfaces */
+  --text-primary: #0d2438; /* Dark blue-gray for text */
+  --text-secondary: #3d5a73; /* Medium blue-gray */
+  --border-color: #8eb8d4; /* Soft blue border */
+  --accent-gold: #003366; /* Dark navy blue for accents */
   --accent-blue: #1877f2;
   --link-color: #1877f2;
-  --button-hover-bg: #dde0e3;
-  --tile-bg: #f5f6f7;
+  --button-hover-bg: #c0daf0; /* Slightly darker icy blue on hover */
+  --tile-bg: #d4e6f5;
 }
 
 /* --- Dark Mode Variables --- */

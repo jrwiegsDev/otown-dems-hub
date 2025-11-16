@@ -34,6 +34,30 @@
 
 .navbar-right {
   justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+/* Snow Toggle Button */
+.snow-toggle-button {
+  background: linear-gradient(135deg, #56CCF2 0%, #2F80ED 100%);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(86, 204, 242, 0.3);
+}
+
+.snow-toggle-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(86, 204, 242, 0.4);
+}
+
+.snow-toggle-button:active {
+  transform: translateY(0);
 }
 
 .navbar-center {
@@ -125,6 +149,11 @@
     height: 36px;
     font-size: 18px;
   }
+
+  .snow-toggle-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -150,5 +179,10 @@
     width: 32px;
     height: 32px;
     font-size: 16px;
+  }
+
+  .snow-toggle-button {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
   }
 }

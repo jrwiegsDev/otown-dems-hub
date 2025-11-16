@@ -5,7 +5,7 @@ import ThemeToggle from './ThemeToggle';
 import LiveUserCount from './LiveUserCount';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ snowfallFeatureEnabled, isSnowing, onStartSnow, onStopSnow }) => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -47,6 +47,16 @@ const Navbar = () => {
         </div>
         
         <div className="navbar-right">
+          {/* Snow Toggle Button - Only visible when feature is enabled by admin */}
+          {snowfallFeatureEnabled && (
+            <button
+              onClick={isSnowing ? onStopSnow : onStartSnow}
+              className="snow-toggle-button"
+              aria-label={isSnowing ? "Stop snowing" : "Let it snow"}
+            >
+              {isSnowing ? 'Stop Snowing!' : 'Let It Snow!'}
+            </button>
+          )}
           <ThemeToggle />
         </div>
       </div>
