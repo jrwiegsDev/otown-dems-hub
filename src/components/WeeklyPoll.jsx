@@ -8,19 +8,6 @@ import './WeeklyPoll.css';
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 const WS_URL = import.meta.env.VITE_WS_URL || 'ws://localhost:8000';
 
-const ISSUES = [
-  'Government Corruption',
-  'Cost of Living / Inflation',
-  'The Economy',
-  'State of US Democracy',
-  'Disruption of Federal Government Services',
-  'Government Shutdown',
-  'Treatment of Immigrants by ICE',
-  'Climate Change',
-  'Crime',
-  'Personal Financial Situation'
-];
-
 const WeeklyPoll = () => {
   const [email, setEmail] = useState('');
   const [hasVoted, setHasVoted] = useState(false);
@@ -30,10 +17,12 @@ const WeeklyPoll = () => {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
+  const [activeIssues, setActiveIssues] = useState([]);
   const wsRef = useRef(null);
 
-  // Fetch initial results
+  // Fetch initial data
   useEffect(() => {
+    fetchActiveIssues();
     fetchResults();
     setupWebSocket();
 
@@ -79,6 +68,17 @@ const WeeklyPoll = () => {
       wsRef.current = ws;
     } catch (error) {
       console.error('Failed to setup WebSocket:', error);
+    }
+  };
+
+  const fetchActiveIssues = async () => {
+    try {
+      const response = await axios.get(`${API_URL}/api/poll/active-issues`);
+      setActiveIssues(response.data.issues || []);
+    } catch (error) {
+      console.error('Error fetching active issues:', error);
+      // Fallback to empty array - results will show what's available
+      setActiveIssues([]);
     }
   };
 
@@ -218,7 +218,7 @@ const WeeklyPoll = () => {
             Pick up to 3 issues affecting you this week. Come back next week to track how things change!
           </p>
           <div className="issues-list">
-            {ISSUES.map((issue) => (
+            {activeIssues.map((issue) => (
               <label key={issue} className="issue-checkbox-label">
                 <input
                   type="checkbox"
@@ -251,7 +251,7 @@ const WeeklyPoll = () => {
           <h3>Live Results</h3>
           <p className="total-votes">Total Votes: {results.totalVotes}</p>
           <div className="results-list">
-            {(results.issues || ISSUES).map((issue) => {
+            {(results.issues || []).map((issue) => {
               const count = results.issueCounts[issue] || 0;
               const percentage = getPercentage(count);
               return (
