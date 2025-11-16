@@ -16,6 +16,15 @@ const Footer = () => {
             🤟 ASL interpretation available - 
             <a href="mailto:ofallondems@gmail.com"> Contact us</a> 48 hours in advance
           </div>
+
+          <a 
+            href="https://www.ofallondemsnewsletter.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="staff-login-link"
+          >
+            Staff Login
+          </a>
         </div>
       </div>
     </footer>
