@@ -23,6 +23,39 @@ const AboutPage = () => {
 
         <div className="grid-column">
           <div className="content-tile">
+            <h2 style={{ color: 'var(--accent-blue)', textAlign: 'center' }}>Official Club Merch!</h2>
+            <p style={{ textAlign: 'center', marginBottom: '1rem' }}>
+              Show your support with our official club t-shirt! <strong>$5 from every purchase</strong> goes directly to the O'Fallon Area Democratic Club!
+            </p>
+            <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
+              <img 
+                src="/t-shirt_design-1.png" 
+                alt="O'Fallon Area Democratic Club T-Shirt Design" 
+                style={{ 
+                  maxWidth: '100%', 
+                  maxHeight: '300px', 
+                  borderRadius: '8px',
+                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.2)'
+                }} 
+              />
+            </div>
+            <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
+              <a 
+                href="https://www.kgdesignsofficial.com/category/ofallon-area-democratic-club" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="donation-button"
+                style={{ display: 'inline-block' }}
+              >
+                Shop Now!
+              </a>
+            </div>
+            <p style={{ textAlign: 'center', fontStyle: 'italic', fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '0' }}>
+              Design by <a href="https://www.kgdesignsofficial.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--link-color)' }}>KG Designs</a>
+            </p>
+          </div>
+
+          <div className="content-tile">
             <h2>Leadership</h2>
             
             <h3 style={{ marginTop: '1rem', marginBottom: '0.5rem', color: 'var(--accent-blue)', fontSize: '1.1rem' }}>
