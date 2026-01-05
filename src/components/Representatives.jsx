@@ -126,13 +126,11 @@ const Representatives = () => {
             
             {/* Julie Fortier Callout for Mike Bost */}
             {rep.name === 'Mike Bost' && (
-              <>
-                <div className="julie-callout-inline">
-                  <p>
-                    <strong>Julie Fortier</strong> is running to replace <strong className="mike-bost-red">Mike Bost</strong> in the 12th District!
-                  </p>
-                </div>
-                <div className="julie-callout-inline">
+              <div className="julie-callout-inline">
+                <p>
+                  <strong>Julie Fortier</strong> is running to replace <strong className="mike-bost-red">Mike Bost</strong> in the 12th District!
+                </p>
+                <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '0.75rem' }}>
                   <a 
                     href="https://www.juliefortier.com" 
                     target="_blank" 
@@ -141,21 +139,94 @@ const Representatives = () => {
                   >
                     Visit Julie's Website!
                   </a>
-                </div>
-                <div className="julie-callout-inline">
-                  <p>
-                    Interested in volunteering for <strong>Julie's</strong> campaign?
-                  </p>
                   <a 
                     href="https://volunteer4julie.com" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="julie-volunteer-button"
                   >
-                    Sign Up Here!
+                    Sign Up to Volunteer!
                   </a>
                 </div>
-              </>
+              </div>
+            )}
+
+            {/* Democratic Candidates for Dick Durbin's Senate seat */}
+            {rep.name === 'Dick Durbin' && (
+              <div className="julie-callout-inline">
+                <p style={{ fontSize: '1.1rem', marginBottom: '0.75rem' }}><strong>Democratic candidates running for this seat:</strong></p>
+                <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  <a href="https://www.botsfordforillinois.com/" target="_blank" rel="noopener noreferrer" className="julie-volunteer-button" style={{ fontSize: '0.85rem', padding: '0.4rem 0.75rem' }}>
+                    Steve Botsford Jr.
+                  </a>
+                  <a href="https://www.seanbrownforsenate.com/" target="_blank" rel="noopener noreferrer" className="julie-volunteer-button" style={{ fontSize: '0.85rem', padding: '0.4rem 0.75rem' }}>
+                    Sean Brown
+                  </a>
+                  <a href="https://awisiforussenate.us/" target="_blank" rel="noopener noreferrer" className="julie-volunteer-button" style={{ fontSize: '0.85rem', padding: '0.4rem 0.75rem' }}>
+                    Awisi Bustos
+                  </a>
+                  <a href="https://www.dean4il.com/" target="_blank" rel="noopener noreferrer" className="julie-volunteer-button" style={{ fontSize: '0.85rem', padding: '0.4rem 0.75rem' }}>
+                    Jonathan Dean
+                  </a>
+                  <a href="https://www.robinforsenate.com/" target="_blank" rel="noopener noreferrer" className="julie-volunteer-button" style={{ fontSize: '0.85rem', padding: '0.4rem 0.75rem' }}>
+                    Robin Kelly
+                  </a>
+                  <a href="https://rajaforil.com/" target="_blank" rel="noopener noreferrer" className="julie-volunteer-button" style={{ fontSize: '0.85rem', padding: '0.4rem 0.75rem' }}>
+                    Raja Krishnamoorthi
+                  </a>
+                  <a href="https://www.maxwell4senate.com/" target="_blank" rel="noopener noreferrer" className="julie-volunteer-button" style={{ fontSize: '0.85rem', padding: '0.4rem 0.75rem' }}>
+                    Bryan Maxwell
+                  </a>
+                  <a href="https://www.runwithkev.com/" target="_blank" rel="noopener noreferrer" className="julie-volunteer-button" style={{ fontSize: '0.85rem', padding: '0.4rem 0.75rem' }}>
+                    Kevin Ryan
+                  </a>
+                  <a href="https://www.julianastratton.com/" target="_blank" rel="noopener noreferrer" className="julie-volunteer-button" style={{ fontSize: '0.85rem', padding: '0.4rem 0.75rem' }}>
+                    Juliana Stratton
+                  </a>
+                  <a href="https://www.swannforsenate.com/" target="_blank" rel="noopener noreferrer" className="julie-volunteer-button" style={{ fontSize: '0.85rem', padding: '0.4rem 0.75rem' }}>
+                    Christopher Swann
+                  </a>
+                </div>
+              </div>
+            )}
+
+            {/* Democratic Candidates for Nikki Budzinski's seat */}
+            {rep.name === 'Nikki Budzinski' && (
+              <div className="julie-callout-inline">
+                <p style={{ fontSize: '1.1rem', marginBottom: '0.75rem' }}><strong>Democratic candidates running for this seat:</strong></p>
+                <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  <a href="https://nikkiforcongress.com/" target="_blank" rel="noopener noreferrer" className="julie-volunteer-button" style={{ fontSize: '0.9rem', padding: '0.5rem 1rem' }}>
+                    Nikki Budzinski
+                  </a>
+                  <a href="https://www.dylanforillinois.com/" target="_blank" rel="noopener noreferrer" className="julie-volunteer-button" style={{ fontSize: '0.9rem', padding: '0.5rem 1rem' }}>
+                    Dylan Blaha
+                  </a>
+                  <a href="https://www.drluxforcongress.com/" target="_blank" rel="noopener noreferrer" className="julie-volunteer-button" style={{ fontSize: '0.9rem', padding: '0.5rem 1rem' }}>
+                    Dr. Emily Lux
+                  </a>
+                </div>
+              </div>
+            )}
+
+            {/* Democratic Candidates for Mary Miller's seat */}
+            {rep.name === 'Mary Miller' && (
+              <div className="julie-callout-inline">
+                <p style={{ fontSize: '1.1rem', marginBottom: '0.75rem' }}><strong>Democratic candidates running for this seat:</strong></p>
+                <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+                  <a href="https://www.pauldavisforcongress.com/" target="_blank" rel="noopener noreferrer" className="julie-volunteer-button" style={{ fontSize: '0.9rem', padding: '0.5rem 1rem' }}>
+                    Paul Davis
+                  </a>
+                  <a href="https://kyleforillinois.com/" target="_blank" rel="noopener noreferrer" className="julie-volunteer-button" style={{ fontSize: '0.9rem', padding: '0.5rem 1rem' }}>
+                    Kyle Nudo
+                  </a>
+                  <a href="https://electraley.com/" target="_blank" rel="noopener noreferrer" className="julie-volunteer-button" style={{ fontSize: '0.9rem', padding: '0.5rem 1rem' }}>
+                    Randy Raley
+                  </a>
+                  <a href="https://www.jentodd2026.us/" target="_blank" rel="noopener noreferrer" className="julie-volunteer-button" style={{ fontSize: '0.9rem', padding: '0.5rem 1rem' }}>
+                    Jennifer Todd
+                  </a>
+                </div>
+              </div>
             )}
           </div>
         ))}
