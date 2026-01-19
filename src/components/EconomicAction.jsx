@@ -9,28 +9,27 @@ const EconomicAction = () => {
       </p>
       
       <div className="economic-resources">
-        {/* Blackout The System */}
+        {/* Free America Walkout */}
         <div className="resource-item">
-          <h3>Blackout The System</h3>
-          <a href="https://blackoutthesystem.com/" target="_blank" rel="noopener noreferrer">
+          <h3>Free America Walkout</h3>
+          <a href="https://action.womensmarch.com/events/o-fallon-illinois-free-america-walkout" target="_blank" rel="noopener noreferrer">
             <img 
-              src="/Blackout-the-System.png" 
-              alt="Blackout The System" 
+              src="/free_america_walkout.png" 
+              alt="Free America Walkout" 
               className="resource-logo"
             />
           </a>
           <p>
-            A global movement using economic power to demand justice and accountability. Stop funding oppression 
-            by strategically withdrawing labor and spending. Build resilient local communities independent of 
-            corrupt systems.
+            On January 20, walk out on fascism. Join communities nationwide to turn your back on the system, 
+            organize mutual aid, and stand together - because in the face of fascism, we will be ungovernable.
           </p>
           <a 
-            href="https://blackoutthesystem.com/" 
+            href="https://action.womensmarch.com/events/o-fallon-illinois-free-america-walkout" 
             target="_blank" 
             rel="noopener noreferrer"
             className="resource-link"
           >
-            Join the Movement →
+            Join the Walkout →
           </a>
         </div>
 
