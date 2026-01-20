@@ -87,6 +87,16 @@ const EventDetailModal = ({ isOpen, onClose, event }) => {
         <button className="modal-close" onClick={onClose}>&times;</button>
         
         <h2 className="modal-title">{event.title}</h2>
+
+        {event.image && (
+          <div className="event-image-container">
+            <img 
+              src={event.image} 
+              alt={`Flyer for ${event.title}`}
+              className="event-image"
+            />
+          </div>
+        )}
         
         <div className="modal-details">
           <div className="detail-item">

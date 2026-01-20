@@ -59,6 +59,22 @@
   padding-right: 2rem;
 }
 
+.event-image-container {
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.event-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 400px;
+  object-fit: contain;
+  background-color: var(--surface);
+}
+
 .modal-details {
   margin-bottom: 1.5rem;
 }

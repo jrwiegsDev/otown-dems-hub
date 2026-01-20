@@ -234,6 +234,28 @@ const Announcements = () => {
                 minute: '2-digit'
               })}
             </p>
+
+            {selectedAnnouncement.image && (
+              <div style={{
+                marginBottom: '20px',
+                borderRadius: '8px',
+                overflow: 'hidden',
+                border: '1px solid var(--border-color)'
+              }}>
+                <img 
+                  src={selectedAnnouncement.image} 
+                  alt={`Image for ${selectedAnnouncement.title}`}
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    display: 'block',
+                    maxHeight: '400px',
+                    objectFit: 'contain',
+                    backgroundColor: 'var(--surface)'
+                  }}
+                />
+              </div>
+            )}
             
             <div style={{ 
               whiteSpace: 'pre-wrap', 

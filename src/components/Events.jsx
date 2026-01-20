@@ -51,6 +51,7 @@ const Events = () => {
       coordinates: event.eventCoordinates,
       link: event.eventLink,
       linkText: event.eventLinkText,
+      image: event.eventImage,
       fullEvent: event
     }
   }));
@@ -90,7 +91,8 @@ const Events = () => {
       location: event.eventLocation,
       coordinates: event.eventCoordinates,
       link: event.eventLink,
-      linkText: event.eventLinkText
+      linkText: event.eventLinkText,
+      image: event.eventImage
     };
     setSelectedEvent(eventData);
     setIsModalOpen(true);
