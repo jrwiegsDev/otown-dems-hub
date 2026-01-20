@@ -132,16 +132,8 @@ const Events = () => {
         eventClick={handleEventClick}
         height={isMobile ? 'auto' : '100%'}
         aspectRatio={1.8}
-        dayMaxEventRows={true}
-        dayMaxEvents={(arg) => {
-          // Count events for this day
-          const dateStr = arg.date.toISOString().split('T')[0];
-          const eventsOnThisDay = events.filter(event => 
-            event.eventDate.slice(0, 10) === dateStr
-          ).length;
-          // If only 1 event, show it; if 2+, show 0 (only the "X Events" link)
-          return eventsOnThisDay === 1 ? true : 0;
-        }}
+        dayMaxEventRows={0}
+        dayMaxEvents={0}
         moreLinkClick={(info) => {
           // Get all events from the segments that were passed
           const eventsOnDate = info.allSegs.map(seg => seg.event.extendedProps.fullEvent);
