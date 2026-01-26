@@ -1,0 +1,92 @@
+/* src/components/Announcements.css */
+
+/* Modal Overlay - fixed backdrop */
+.announcement-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Modal Content - scrollable */
+.announcement-modal-content {
+  background-color: var(--surface);
+  color: var(--text-primary);
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 80vh;
+  max-height: 80dvh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--border-color);
+}
+
+.announcement-modal-close {
+  position: sticky;
+  top: -30px;
+  float: right;
+  background: var(--surface);
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--text-primary);
+  line-height: 1;
+  padding: 5px 10px;
+  opacity: 0.7;
+  transition: opacity 0.2s, color 0.2s;
+  z-index: 10;
+  margin-top: -10px;
+  margin-right: -10px;
+}
+
+.announcement-modal-close:hover {
+  color: var(--accent-blue);
+  opacity: 1;
+}
+
+.announcement-modal-title {
+  color: var(--accent-blue);
+  margin-top: 0;
+  margin-bottom: 12px;
+  padding-right: 40px;
+}
+
+.announcement-modal-date {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.announcement-modal-image {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.announcement-modal-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 400px;
+  object-fit: contain;
+  background-color: var(--surface);
+}
+
+.announcement-modal-body {
+  white-space: pre-wrap;
+  line-height: 1.6;
+  color: var(--text-primary);
+}

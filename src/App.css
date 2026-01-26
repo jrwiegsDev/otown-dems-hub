@@ -118,7 +118,7 @@
 
 .content-tile {
   background-color: var(--surface);
-  border: 1px solid var(--accent-gold);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 1.5rem;
   overflow-wrap: break-word;
@@ -152,7 +152,7 @@
 
 /* --- Banner --- */
 .protest-banner {
-  border: 2px solid var(--accent-gold);
+  border: 2px solid var(--accent-blue);
   border-radius: 8px;
   padding: 1rem 1.5rem;
   background-color: var(--surface);
@@ -160,7 +160,7 @@
 }
 
 .protest-banner h2 {
-  color: var(--accent-blue);
+  color: var(--accent-gold);
   margin-top: 0;
 }
 
@@ -168,20 +168,20 @@
   display: inline-block;
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  background: linear-gradient(135deg, var(--accent-blue) 0%, #002d5c 100%);
   color: white;
   text-decoration: none;
   border-radius: 6px;
   font-weight: 600;
   font-size: 1rem;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 2px 8px rgba(var(--accent-blue-rgb), 0.3);
 }
 
 .banner-event-link:hover {
-  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  background: linear-gradient(135deg, #002d5c 0%, #001f3f 100%);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 4px 12px rgba(var(--accent-blue-rgb), 0.4);
 }
 
 .banner-event-link:active {
@@ -372,7 +372,7 @@
 }
 
 .donation-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: var(--accent-blue-light);
   transform: scale(1.05);
 }
 
@@ -436,7 +436,7 @@
 }
 
 .representatives-list::-webkit-scrollbar-thumb:hover {
-  background: #0056b3;
+  background: var(--accent-blue-light);
 }
 
 .rep-card {
@@ -500,7 +500,7 @@
 }
 
 .rep-contact-link:hover {
-  background-color: #0056b3;
+  background-color: var(--accent-blue-light);
   transform: scale(1.05);
 }
 
@@ -592,20 +592,20 @@
 .julie-volunteer-button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  background: linear-gradient(135deg, var(--accent-blue) 0%, #002d5c 100%);
   color: white;
   text-decoration: none;
   border-radius: 8px;
   font-weight: 600;
   font-size: 1rem;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 2px 8px rgba(var(--accent-blue-rgb), 0.3);
 }
 
 .julie-volunteer-button:hover {
-  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  background: linear-gradient(135deg, #002d5c 0%, #001f3f 100%);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 4px 12px rgba(var(--accent-blue-rgb), 0.4);
 }
 
 .julie-volunteer-button:active {
@@ -657,7 +657,7 @@
 }
 
 .no-kings-link:hover {
-  background-color: #d4af37; /* Slightly darker gold on hover */
+  background-color: var(--accent-gold-dark);
   transform: scale(1.05);
 }
 
@@ -780,7 +780,7 @@
 }
 
 .back-link:hover {
-  background-color: #0056b3;
+  background-color: var(--accent-blue-light);
   transform: scale(1.05);
 }
 
@@ -852,19 +852,42 @@
   /* Switch grid to a single column on smaller screens */
   .main-content-grid {
     grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
 
-  /* Reorder columns on mobile: Weekly Poll (column 3) appears first */
-  .grid-column:nth-child(1) {
-    order: 2; /* Informational column (Banner, Announcements, Donation) - second */
+  /* Make grid columns transparent containers so tiles can be reordered on home page */
+  .home-page .grid-column {
+    display: contents;
   }
 
-  .grid-column:nth-child(2) {
-    order: 3; /* Calendar column - third */
+  /* Reorder tiles on mobile with specific order for home page */
+  .home-page .calendar-tile {
+    order: 1; /* Event calendar first */
   }
 
-  .grid-column:nth-child(3) {
-    order: 1; /* Action column (Weekly Poll, Mailing List) - FIRST on mobile! */
+  .home-page .banner-tile {
+    order: 2; /* Banner event second */
+  }
+
+  .home-page .grid-column:nth-child(1) > .content-tile:nth-child(2) {
+    order: 3; /* Announcements third */
+  }
+
+  .home-page .grid-column:nth-child(3) > .content-tile:nth-child(1) {
+    order: 4; /* Weekly poll fourth */
+  }
+
+  .home-page .grid-column:nth-child(2) > .content-tile:nth-child(2) {
+    order: 5; /* Representatives fifth */
+  }
+
+  .home-page .grid-column:nth-child(3) > .content-tile:nth-child(2) {
+    order: 6; /* Mailing list sixth */
+  }
+
+  .home-page .donation-tile {
+    order: 7; /* Donation callout seventh */
   }
 
   /* Reset calendar min-height on mobile to avoid excessive space */

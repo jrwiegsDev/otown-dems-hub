@@ -68,6 +68,113 @@
   font-size: 1rem;
 }
 
+/* Primary Election Notice Section */
+.primary-election-notice {
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  background-color: rgba(var(--accent-rgb), 0.05);
+  border-radius: 10px;
+  border: 2px solid rgba(var(--accent-rgb), 0.3);
+}
+
+.primary-election-notice h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.15rem;
+  color: var(--accent-color);
+  border-bottom: 2px solid rgba(var(--accent-rgb), 0.3);
+  padding-bottom: 0.5rem;
+}
+
+.primary-election-notice h4 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: var(--accent-color);
+}
+
+.primary-election-notice h5 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.primary-election-notice p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.primary-election-notice ul,
+.primary-election-notice ol {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.primary-election-notice li {
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+.important-dates,
+.early-voting-info,
+.election-day-info,
+.voting-age-reminder,
+.additional-info {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  border-left: 4px solid var(--accent-color);
+}
+
+[data-theme='dark'] .important-dates,
+[data-theme='dark'] .early-voting-info,
+[data-theme='dark'] .election-day-info,
+[data-theme='dark'] .voting-age-reminder,
+[data-theme='dark'] .additional-info {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.important-dates h4,
+.early-voting-info h4,
+.election-day-info h4,
+.voting-age-reminder h4 {
+  margin-top: 0;
+}
+
+.note-text {
+  font-size: 0.9rem;
+  font-style: italic;
+  opacity: 0.9;
+  margin-top: 0.75rem !important;
+}
+
+.voting-age-reminder {
+  background-color: rgba(var(--accent-rgb), 0.1);
+}
+
+/* Links within primary election sections - lighter blue for better visibility */
+.additional-info a {
+  color: #5eb3ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.additional-info a:hover {
+  color: #80c5ff;
+  text-decoration: underline;
+}
+
+/* Dark mode - even lighter blue for contrast */
+[data-theme='dark'] .additional-info a {
+  color: #6ec1ff;
+}
+
+[data-theme='dark'] .additional-info a:hover {
+  color: #8fd0ff;
+}
+
 /* Quick Links Section */
 .quick-links {
   margin-bottom: 1.5rem;

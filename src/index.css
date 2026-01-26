@@ -1,31 +1,83 @@
 /* src/index.css */
 
+/* ==========================================================================
+   O'Fallon Color Palette
+   Based on O'Fallon Township (white, blue, green, black) 
+   and OTHS Panthers (blue and gold)
+   ========================================================================== */
+
 /* --- Light Mode Variables (Default) --- */
 :root {
-  --background: #b8d4e8; /* Icy blue background */
-  --surface: #d4e6f5; /* Lighter icy blue for surfaces */
-  --text-primary: #0d2438; /* Dark blue-gray for text */
-  --text-secondary: #3d5a73; /* Medium blue-gray */
-  --border-color: #8eb8d4; /* Soft blue border */
-  --accent-gold: #003366; /* Dark navy blue for accents */
-  --accent-blue: #1877f2;
-  --link-color: #1877f2;
-  --button-hover-bg: #c0daf0; /* Slightly darker icy blue on hover */
-  --tile-bg: #d4e6f5;
+  /* Core backgrounds */
+  --background: #f5f7fa;           /* Clean off-white */
+  --surface: #ffffff;              /* Pure white for tiles/cards */
+  --tile-bg: #ffffff;
+  
+  /* Text colors */
+  --text-primary: #1a1a1a;         /* Near black for readability */
+  --text-secondary: #4a5568;       /* Softer gray for secondary text */
+  
+  /* O'Fallon Blue - Primary accent (from both Township and OTHS) */
+  --accent-blue: #003d7a;          /* Deep O'Fallon blue */
+  --accent-blue-light: #0056a8;    /* Lighter blue for hover states */
+  --accent-blue-rgb: 0, 61, 122;   /* RGB for rgba() usage */
+  
+  /* OTHS Gold - Secondary accent */
+  --accent-gold: #c5a028;          /* Panther gold */
+  --accent-gold-light: #d4b23a;    /* Lighter gold for hover */
+  --accent-gold-dark: #a68921;     /* Darker gold for contrast */
+  --accent-gold-rgb: 197, 160, 40; /* RGB for rgba() usage */
+  
+  /* Township Green - Tertiary accent */
+  --accent-green: #2e7d32;         /* O'Fallon Township green */
+  --accent-green-light: #4caf50;   /* Lighter green */
+  --accent-green-rgb: 46, 125, 50; /* RGB for rgba() usage */
+  
+  /* Functional colors */
+  --link-color: #0056a8;           /* Blue links */
+  --border-color: #d1d5db;         /* Light gray borders */
+  --button-hover-bg: #e8f0f8;      /* Light blue tint on hover */
+  
+  /* Legacy support - map to new system */
+  --accent-color: var(--accent-blue);
+  --accent-rgb: var(--accent-blue-rgb);
 }
 
 /* --- Dark Mode Variables --- */
 body[data-theme='dark'] {
-  --background: #2b3139;
-  --surface: #353a42;
-  --text-primary: #e8eaed;
-  --text-secondary: #9aa0a6;
-  --border-color: #4a5058;
-  --accent-gold: var(--text-primary); /* CHANGED: Make it the same as the primary text (white) */
-  --accent-blue: #58a6ff;
-  --link-color: #58a6ff;
-  --button-hover-bg: #404650;
-  --tile-bg: #353a42;
+  /* Core backgrounds */
+  --background: #121820;           /* Deep blue-black */
+  --surface: #1a2332;              /* Slightly lighter for tiles */
+  --tile-bg: #1a2332;
+  
+  /* Text colors */
+  --text-primary: #f0f2f5;         /* Off-white for readability */
+  --text-secondary: #9ca3af;       /* Muted gray for secondary */
+  
+  /* O'Fallon Blue - Primary accent (brighter for dark mode) */
+  --accent-blue: #4d9fff;          /* Brighter blue for dark bg */
+  --accent-blue-light: #70b3ff;    /* Even lighter for hover */
+  --accent-blue-rgb: 77, 159, 255;
+  
+  /* OTHS Gold - Secondary accent (vibrant on dark) */
+  --accent-gold: #e8c547;          /* Brighter gold for dark mode */
+  --accent-gold-light: #f0d465;    /* Lighter gold for hover */
+  --accent-gold-dark: #c5a028;     /* Original gold */
+  --accent-gold-rgb: 232, 197, 71;
+  
+  /* Township Green - Tertiary accent */
+  --accent-green: #66bb6a;         /* Brighter green for dark mode */
+  --accent-green-light: #81c784;
+  --accent-green-rgb: 102, 187, 106;
+  
+  /* Functional colors */
+  --link-color: #70b3ff;           /* Bright blue links */
+  --border-color: #374151;         /* Dark gray borders */
+  --button-hover-bg: #2a3544;      /* Darker blue tint on hover */
+  
+  /* Legacy support */
+  --accent-color: var(--accent-blue);
+  --accent-rgb: var(--accent-blue-rgb);
 }
 
 /* --- Global Styles --- */
@@ -62,7 +114,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #1e40af;
+  background: var(--accent-blue-light);
 }
 
 /* Firefox scrollbar */

@@ -1,6 +1,7 @@
 // src/components/Announcements.jsx
 
 import React, { useState, useEffect } from 'react';
+import './Announcements.css';
 
 const Announcements = () => {
   const [announcements, setAnnouncements] = useState([]);
@@ -153,79 +154,23 @@ const Announcements = () => {
         <div 
           className="announcement-modal-overlay"
           onClick={closeModal}
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: 'rgba(0, 0, 0, 0.6)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            zIndex: 1000,
-            padding: '20px'
-          }}
         >
           <div 
             className="announcement-modal-content"
             onClick={(e) => e.stopPropagation()}
-            style={{
-              backgroundColor: 'var(--surface)',
-              color: 'var(--text-primary)',
-              padding: '30px',
-              borderRadius: '12px',
-              maxWidth: '600px',
-              width: '100%',
-              maxHeight: '80vh',
-              overflowY: 'auto',
-              position: 'relative',
-              boxShadow: '0 10px 40px rgba(0, 0, 0, 0.5)',
-              border: '1px solid var(--border-color)'
-            }}
           >
             <button
+              className="announcement-modal-close"
               onClick={closeModal}
-              style={{
-                position: 'absolute',
-                top: '15px',
-                right: '15px',
-                background: 'none',
-                border: 'none',
-                fontSize: '28px',
-                cursor: 'pointer',
-                color: 'var(--text-primary)',
-                lineHeight: '1',
-                padding: '5px 10px',
-                opacity: 0.7
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.color = 'var(--accent-blue)';
-                e.currentTarget.style.opacity = '1';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.color = 'var(--text-primary)';
-                e.currentTarget.style.opacity = '0.7';
-              }}
             >
               ×
             </button>
             
-            <h2 style={{ 
-              color: 'var(--accent-blue)', 
-              marginTop: 0,
-              marginBottom: '12px',
-              paddingRight: '30px'
-            }}>
+            <h2 className="announcement-modal-title">
               {selectedAnnouncement.title}
             </h2>
             
-            <p style={{ 
-              fontSize: '0.85rem', 
-              color: 'var(--text-secondary)', 
-              marginBottom: '20px',
-              fontStyle: 'italic' 
-            }}>
+            <p className="announcement-modal-date">
               Posted {new Date(selectedAnnouncement.createdAt).toLocaleDateString('en-US', { 
                 month: 'long', 
                 day: 'numeric', 
@@ -236,32 +181,15 @@ const Announcements = () => {
             </p>
 
             {selectedAnnouncement.image && (
-              <div style={{
-                marginBottom: '20px',
-                borderRadius: '8px',
-                overflow: 'hidden',
-                border: '1px solid var(--border-color)'
-              }}>
+              <div className="announcement-modal-image">
                 <img 
                   src={selectedAnnouncement.image} 
                   alt={`Image for ${selectedAnnouncement.title}`}
-                  style={{
-                    width: '100%',
-                    height: 'auto',
-                    display: 'block',
-                    maxHeight: '400px',
-                    objectFit: 'contain',
-                    backgroundColor: 'var(--surface)'
-                  }}
                 />
               </div>
             )}
             
-            <div style={{ 
-              whiteSpace: 'pre-wrap', 
-              lineHeight: '1.6',
-              color: 'var(--text-primary)'
-            }}>
+            <div className="announcement-modal-body">
               {selectedAnnouncement.content}
             </div>
           </div>

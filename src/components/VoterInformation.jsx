@@ -32,6 +32,85 @@ const VoterInformation = () => {
         </div>
       </div>
 
+      {/* Upcoming Primary Election Information */}
+      <div className="info-section">
+        <button 
+          className={`section-header ${activeSection === 'primary' ? 'active' : ''}`}
+          onClick={() => toggleSection('primary')}
+        >
+          <span>🗳️ March 17, 2026 General Primary Election</span>
+          <span className="toggle-icon">{activeSection === 'primary' ? '−' : '+'}</span>
+        </button>
+        {activeSection === 'primary' && (
+          <div className="section-content">
+            <div className="important-dates">
+              <h4>Important Deadlines</h4>
+              <ul>
+                <li><strong>Last day to register:</strong> February 17, 2026</li>
+                <li><strong>All forms must be turned in by:</strong> February 18, 2026</li>
+              </ul>
+            </div>
+
+            <div className="early-voting-info">
+              <h4>Early Voting</h4>
+              <p><strong>Dates:</strong> February 5 - March 16, 2026</p>
+              <p><strong>Hours:</strong> Monday - Friday, 8:30 AM - 5:00 PM</p>
+              
+              <h5>Permanent Early Voting Sites:</h5>
+              <ol>
+                <li>St. Clair County Clerk's Office, Election Department, 2nd Floor, 10 Public Square, Belleville</li>
+                <li>The Rec Complex, 9950 Bunkum Rd., Fairview Heights</li>
+                <li>O'Fallon Township Office, 801 East State St., O'Fallon</li>
+                <li>Jerome Early Childhood Center (Gym), 1825 Jerome Ln., Cahokia Heights</li>
+              </ol>
+
+              <h5>Extended Hours:</h5>
+              <p><strong>Weekdays:</strong></p>
+              <ul>
+                <li>March 2-6: 9 AM - 5 PM</li>
+                <li>March 9-13: 9 AM - 7 PM</li>
+                <li>March 16: 9 AM - 7 PM</li>
+              </ul>
+              <p><strong>Weekends:</strong></p>
+              <ul>
+                <li>Saturday, March 7: 9 AM - Noon | Sunday, March 8: 10 AM - 4 PM</li>
+                <li>Saturday, March 14: 9 AM - 5 PM | Sunday, March 15: 10 AM - 4 PM</li>
+              </ul>
+            </div>
+
+            <div className="election-day-info">
+              <h4>Election Day - March 17, 2026</h4>
+              <p><strong>Polling Hours:</strong> 6:00 AM - 7:00 PM</p>
+              <p className="note-text">
+                <em>Note: The County building will be closed February 16, 2026 for President's Day, 
+                but voting in-person at the County Clerk's Office is available on March 17, 2026 
+                from 6 AM to 7 PM.</em>
+              </p>
+            </div>
+
+            <div className="voting-age-reminder">
+              <h4>Special Voting Age Rule for Primary Elections</h4>
+              <p>
+                <strong>10 ILCS 5/7-44:</strong> An individual who is 17 years of age on the date 
+                of a primary election and who is otherwise qualified to vote and will be 18 years 
+                of age on or before the date of the immediately following General Election is 
+                qualified to vote at that primary.
+              </p>
+            </div>
+
+            <div className="additional-info">
+              <p>
+                <strong>Contact Election Department:</strong><br />
+                Phone: <a href="tel:618-277-6600,2367">618-277-6600, Extension 2367</a><br />
+                Website: <a href="https://www.stclaircountyil.gov/departments/county-clerk" target="_blank" rel="noopener noreferrer">
+                  www.stclaircountyil.gov/departments/county-clerk
+                </a>
+              </p>
+            </div>
+          </div>
+        )}
+      </div>
+
       {/* Quick Links */}
       <div className="quick-links">
         <h3>Quick Access</h3>
