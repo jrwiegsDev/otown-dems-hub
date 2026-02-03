@@ -90,11 +90,20 @@ const EventDetailModal = ({ isOpen, onClose, event }) => {
 
         {event.image && (
           <div className="event-image-container">
-            <img 
-              src={event.image} 
-              alt={`Flyer for ${event.title}`}
-              className="event-image"
-            />
+            {event.image.startsWith('data:application/pdf') ? (
+              <iframe
+                src={event.image}
+                title={`Flyer for ${event.title}`}
+                className="event-pdf"
+                style={{ width: '100%', height: '500px', border: 'none' }}
+              />
+            ) : (
+              <img 
+                src={event.image} 
+                alt={`Flyer for ${event.title}`}
+                className="event-image"
+              />
+            )}
           </div>
         )}
         

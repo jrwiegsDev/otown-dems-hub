@@ -11,6 +11,31 @@ const ActiveOrganizations = () => {
       </p>
       
       <div className="active-orgs-resources">
+        {/* MICA Project */}
+        <div className="resource-item">
+          <h3>MICA Project</h3>
+          <a href="https://www.mica-project.org/" target="_blank" rel="noopener noreferrer">
+            <img 
+              src="/MICA.png" 
+              alt="MICA Project" 
+              className="resource-logo"
+            />
+          </a>
+          <p>
+            The Migrant and Immigrant Community Action Project works with low-income immigrants to overcome 
+            barriers to justice through legal services, organizing, advocacy, and education—promoting the 
+            voice and human dignity of immigrant communities.
+          </p>
+          <a 
+            href="https://www.mica-project.org/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="resource-link"
+          >
+            Learn More & Support →
+          </a>
+        </div>
+
         {/* No Kings */}
         <div className="resource-item">
           <h3>No Kings</h3>

@@ -13,24 +13,14 @@ const Banner = () => {
         const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/events`);
         const events = response.data;
         
-        // Find the event marked as banner event
+        // Only show an event in the banner if it's explicitly marked as a banner event
         const bannerEvent = events.find(event => event.isBannerEvent === true);
         
         if (bannerEvent) {
           setNextEvent(bannerEvent);
         } else {
-          // Fallback: Find the next upcoming event if no banner event is set
-          const now = new Date();
-          const today = now.toISOString().slice(0, 10); // Get today in YYYY-MM-DD format
-          
-          const upcomingEvents = events.filter(event => {
-            const eventDateOnly = event.eventDate.slice(0, 10); // Get event date in YYYY-MM-DD format
-            return eventDateOnly >= today; // Compare date strings directly
-          });
-          
-          // Get the closest upcoming event
-          const nextUpcomingEvent = upcomingEvents.length > 0 ? upcomingEvents[0] : null;
-          setNextEvent(nextUpcomingEvent);
+          // No banner event selected - show default message
+          setNextEvent(null);
         }
       } catch (error) {
         console.error('Error fetching events for banner:', error);

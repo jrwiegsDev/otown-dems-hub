@@ -9,30 +9,6 @@ const EconomicAction = () => {
       </p>
       
       <div className="economic-resources">
-        {/* Free America Walkout */}
-        <div className="resource-item">
-          <h3>Free America Walkout</h3>
-          <a href="https://action.womensmarch.com/events/o-fallon-illinois-free-america-walkout" target="_blank" rel="noopener noreferrer">
-            <img 
-              src="/free_america_walkout.png" 
-              alt="Free America Walkout" 
-              className="resource-logo"
-            />
-          </a>
-          <p>
-            On January 20, walk out on fascism. Join communities nationwide to turn your back on the system, 
-            organize mutual aid, and stand together - because in the face of fascism, we will be ungovernable.
-          </p>
-          <a 
-            href="https://action.womensmarch.com/events/o-fallon-illinois-free-america-walkout" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="resource-link"
-          >
-            Join the Walkout →
-          </a>
-        </div>
-
         {/* OpenSecrets */}
         <div className="resource-item">
           <h3>OpenSecrets</h3>
