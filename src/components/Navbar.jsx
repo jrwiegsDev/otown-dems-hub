@@ -1,46 +1,74 @@
 // src/components/Navbar.jsx
 
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
 import LiveUserCount from './LiveUserCount';
 import './Navbar.css';
 
 const Navbar = ({ snowfallFeatureEnabled, isSnowing, onStartSnow, onStopSnow }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-left">
           <LiveUserCount />
         </div>
+
+        {/* Hamburger button - visible on mobile only */}
+        <button 
+          className={`hamburger ${isMenuOpen ? 'active' : ''}`}
+          onClick={toggleMenu}
+          aria-label="Toggle navigation menu"
+          aria-expanded={isMenuOpen}
+        >
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+        </button>
         
-        <div className="navbar-center">
+        <div className={`navbar-center ${isMenuOpen ? 'open' : ''}`}>
           <NavLink 
             to="/" 
             className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+            onClick={closeMenu}
           >
             Home
           </NavLink>
           <NavLink 
             to="/about" 
             className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+            onClick={closeMenu}
           >
             About
           </NavLink>
           <NavLink 
             to="/get-involved" 
             className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+            onClick={closeMenu}
           >
             Get Involved
           </NavLink>
           <NavLink 
             to="/resources" 
             className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+            onClick={closeMenu}
           >
             Resources
           </NavLink>
           <NavLink 
             to="/democracy-dashboard" 
             className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+            onClick={closeMenu}
           >
             Democracy Dashboard
           </NavLink>
@@ -60,6 +88,9 @@ const Navbar = ({ snowfallFeatureEnabled, isSnowing, onStartSnow, onStopSnow }) 
           <ThemeToggle />
         </div>
       </div>
+
+      {/* Overlay for mobile menu */}
+      {isMenuOpen && <div className="navbar-overlay" onClick={closeMenu}></div>}
     </nav>
   );
 };
