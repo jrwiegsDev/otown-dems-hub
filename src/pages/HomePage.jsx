@@ -4,7 +4,7 @@ import Events from '../components/Events';
 import Banner from '../components/Banner';
 import Announcements from '../components/Announcements';
 import MailingListSignup from '../components/MailingListSignup';
-import Donation from '../components/Donation';
+import StandWithMinnesota from '../components/StandWithMinnesota';
 import Representatives from '../components/Representatives';
 import WeeklyPoll from '../components/WeeklyPoll';
 
@@ -32,9 +32,9 @@ const HomePage = () => {
             <Announcements />
           </div>
 
-          {/* Donation */}
-          <div className="content-tile donation-tile">
-            <Donation />
+          {/* Stand With Minnesota */}
+          <div className="content-tile">
+            <StandWithMinnesota />
           </div>
         </div>
         
