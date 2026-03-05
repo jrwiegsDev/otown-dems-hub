@@ -874,8 +874,12 @@
     order: 3; /* Announcements third */
   }
 
+  .home-page .grid-column:nth-child(1) > .content-tile:nth-child(3) {
+    order: 4; /* Stand With Minnesota fourth */
+  }
+
   .home-page .grid-column:nth-child(3) > .content-tile:nth-child(1) {
-    order: 4; /* Weekly poll fourth */
+    order: 0; /* Weekly poll first */
   }
 
   .home-page .grid-column:nth-child(2) > .content-tile:nth-child(2) {
