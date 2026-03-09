@@ -14,7 +14,15 @@ const Banner = () => {
         const events = response.data;
         
         // Only show an event in the banner if it's explicitly marked as a banner event
-        const bannerEvent = events.find(event => event.isBannerEvent === true);
+        // AND the event date hasn't passed yet
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const bannerEvent = events.find(event => {
+          if (event.isBannerEvent !== true) return false;
+          const eventDate = new Date(event.eventDate);
+          eventDate.setHours(0, 0, 0, 0);
+          return eventDate >= today;
+        });
         
         if (bannerEvent) {
           setNextEvent(bannerEvent);
